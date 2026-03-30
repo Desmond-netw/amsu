@@ -3,6 +3,9 @@ import "./globals.css";
 
 import { Inter, Roboto } from "next/font/google";
 
+import { Navbar } from "./ui_components/Nav/Navbar";
+import { Footer } from "./ui_components/Footer/Footer";
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -27,8 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable} antialiased`}>
-        <main>{children}</main>
+      <body
+        className={`${inter.variable} text-slate-700 ${roboto.variable} antialiased`}
+      >
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

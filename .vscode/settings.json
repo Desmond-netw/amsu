@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImport": "explicit"
+  },
+  "editor.formatOnSave": true, //tell vscode to format files on save
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.implicitProjectConfig.experimentalDecorators": true
+}

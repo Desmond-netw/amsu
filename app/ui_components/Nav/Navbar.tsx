@@ -25,7 +25,7 @@ export const Navbar = () => {
       <Topbar />
 
       {/* Main Navbar: Sticks to the top when Topbar is scrolled past */}
-      <header className="bg-gray-100 border-b-2 border-gray-600 py-3 sticky top-0 z-50 shadow-sm transition-all">
+      <header className="bg-gray-100 border-b-2 border-brand_1-300 py-3 sticky top-0 z-50 shadow-sm transition-all">
         <div className="container mx-auto px-4">
           <div className="w-full flex items-center justify-between">
             {/* Logo Section */}

@@ -5,6 +5,7 @@ import { Inter, Roboto } from "next/font/google";
 
 import { Navbar } from "./ui_components/Nav/Navbar";
 import { Footer } from "./ui_components/Footer/Footer";
+import Container from "./ui_components/Container";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,7 +37,10 @@ export default function RootLayout({
         <Theme>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow">
+              <Container>{children}</Container>{" "}
+              {/* Wrap children with Container for consistent layout */}
+            </main>
             <Footer />
           </div>
         </Theme>

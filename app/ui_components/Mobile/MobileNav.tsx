@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // Changed from react-scroll
+import { usePathname } from "next/navigation";
 import { RiMenu3Fill } from "react-icons/ri";
 import {
   Sheet,
@@ -10,35 +12,20 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Logo from "./Logo";
-import Socials from "./Socials";
-import { Link as ScrollLink } from "react-scroll";
+import Logo from "../logo/Logo";
+import Socials from "../Socials/Socials";
 
 const links = [
-  {
-    name: "home",
-    path: "home",
-  },
-  {
-    name: "about",
-    path: "about",
-  },
-  {
-    name: "serivces",
-    path: "serivces",
-  },
-  {
-    name: "projects",
-    path: "projects",
-  },
-  {
-    name: "contact",
-    path: "contact",
-  },
+  { name: "home", path: "/" },
+  { name: "about", path: "/about" },
+  { name: "services", path: "/services" },
+  { name: "projects", path: "/projects" },
+  { name: "contact", path: "/contact" },
 ];
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -48,7 +35,6 @@ const MobileNav = () => {
 
       <SheetContent side="right" className="bg-primary text-white border-none">
         <div className="flex flex-col pt-16 pb-8 items-center justify-between h-full">
-          {/* Header */}
           <SheetHeader>
             <SheetTitle>
               <Logo />
@@ -58,29 +44,22 @@ const MobileNav = () => {
             </SheetDescription>
           </SheetHeader>
 
-          {/* Nav links */}
           <ul className="w-full flex flex-col gap-6 items-center justify-center">
             {links.map((link, indx) => (
-              <li
-                key={indx}
-                className="text-white uppercase font-semibold tracking-[1.2px]"
-              >
-                <ScrollLink
-                  to={link.path}
-                  smooth
-                  spy
-                  duration={500}
-                  activeClass="text-accent"
-                  className="cursor-pointer text-lg font-primary capitalize hover:text-brand-yellow transition"
-                  onClick={() => setIsOpen(false)}
+              <li key={indx}>
+                <Link
+                  href={link.path}
+                  onClick={() => setIsOpen(false)} // Closes sheet on click
+                  className={`text-white uppercase font-semibold tracking-[1.2px] text-lg hover:text-brand-yellow transition ${
+                    pathname === link.path ? "text-brand-yellow" : ""
+                  }`}
                 >
                   {link.name}
-                </ScrollLink>
+                </Link>
               </li>
             ))}
           </ul>
 
-          {/* Socials */}
           <div className="mt-10">
             <Socials containerStyles="text-white text-xl flex gap-6" />
           </div>

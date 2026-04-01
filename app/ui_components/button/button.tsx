@@ -1,85 +1,53 @@
-"use client";
-
 import React from "react";
-import { RiArrowRightUpLine } from "react-icons/ri";
-import Link from "next/link";
+import { RiArrowRightFill } from "react-icons/ri";
 
-interface ButtonProps {
-  text: string;
-  href?: string;
-  onClick?: () => void;
-  variant?: "primary" | "accent" | "white";
-  size?: "sm" | "md" | "lg";
-  radius?: "md" | string;
-  className?: string;
-}
-
-const Button: React.FC<ButtonProps> = ({
-  text,
-  href,
-  onClick,
-  variant = "primary",
-  size = "md",
-  radius = "rounded-full",
-  className = "",
-}) => {
-  // Logic for Background Colors
-  const variants = {
-    primary: "bg-slate-900 hover:bg-blue-700",
-    accent: "bg-blue-600 hover:bg-slate-900",
-    white: "bg-white hover:bg-gray-100",
-  };
-
-  // Logic for Sizing
-  const sizes = {
-    sm: "h-10 pl-4 pr-1 text-[10px]",
-    md: "h-12 pl-6 pr-1 text-xs",
-    lg: "h-14 pl-8 pr-2 text-sm",
-  };
-
-  const buttonContent = (
-    <button
-      onClick={onClick}
-      className={`
-        group flex items-center ${radius} overflow-hidden transition-all duration-300
-        ${variants[variant]}
-        ${sizes[size]}
-        ${className}
-      `}
+const Button = ({ text }: { text: string }) => {
+  return (
+    <div
+      className="
+        w-52 h-12 
+        py-3 px-3 
+        flex items-center justify-between group 
+        bg-brand_1-500 hover:bg-brand_1-600 active:bg-brand_1-700
+        border-2 border-brand_1-700
+        rounded-lg transition-all duration-300
+      "
     >
-      <span
-        className={`
-        font-bold uppercase tracking-widest
-        ${variant === "white" ? "text-slate-900" : "text-white"}
-      `}
+      {/* Text */}
+      <div
+        className="
+        flex-1 text-center 
+        tracking-[1.2px] 
+        font-primary font-semibold 
+        text-white uppercase
+      "
       >
         {text}
-      </span>
+      </div>
 
-      {/* Icon Circle */}
+      {/* Arrow Box */}
       <div
-        className={`
-        ml-4 flex items-center justify-center rounded-full transition-all duration-300
-        ${size === "sm" ? "w-8 h-8" : "w-10 h-10"}
-        ${variant === "white" ? "bg-slate-100 group-hover:bg-slate-200" : "bg-white/10 group-hover:bg-white/20"}
-      `}
+        className="
+          w-11 h-11 
+          bg-white 
+          flex items-center justify-center 
+          rounded-md
+          transition-all duration-300
+          group-hover:bg-brand_1-50
+          group-active:bg-brand_1-100
+        "
       >
-        <RiArrowRightUpLine
-          className={`
-          text-xl group-hover:rotate-45 transition-all duration-300
-          ${variant === "white" ? "text-slate-900" : "text-white"}
-        `}
+        <RiArrowRightFill
+          className="
+            text-brand_1-700 
+            text-xl 
+            transition-all duration-300 
+            group-hover:rotate-45
+          "
         />
       </div>
-    </button>
+    </div>
   );
-
-  // If href is provided, wrap in Next.js Link
-  if (href) {
-    return <Link href={href}>{buttonContent}</Link>;
-  }
-
-  return buttonContent;
 };
 
 export default Button;

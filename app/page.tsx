@@ -1,3 +1,8 @@
+import HomeBanner from "./ui_components/HomeBanner/HomeBanner";
 export default function Home() {
-  return <div className="bg-blue-500">AMSU</div>;
+  return (
+    <div>
+      <HomeBanner />
+    </div>
+  );
 }

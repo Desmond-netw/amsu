@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container";
 import FooterList from "./FooterList";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { MdFacebook } from "react-icons/md";
 import {
@@ -114,7 +114,7 @@ export const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" text-md text-brand_1-200 hover:text-brand_1-300"
+                  className="w-6 h-6 text-base text-brand_1-200 hover:text-brand_1-300"
                 >
                   <link.Icon />
                 </Link>

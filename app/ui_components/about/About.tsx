@@ -54,7 +54,7 @@ export const About = () => {
               </div> */}
 
               {/* contact Button */}
-              <Button text="Contact us" />
+              <Button text="Read More" />
             </div>
           </div>
 

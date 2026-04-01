@@ -123,7 +123,11 @@ export const Footer = () => {
 
             {/* Logo */}
             <Flex align="center" gap="2">
-              <Avatar size="8" src="/assets/logo/logo.png" fallback="A" />
+              <Avatar
+                size={{ initial: "5", md: "7", lg: "8", xl: "9" }}
+                src="/assets/logo/logo.png"
+                fallback="A"
+              />
             </Flex>
           </div>
           {/* Footer list 3 end */}

@@ -10,7 +10,7 @@ const ContactMapSection = () => {
         {/* Map container – responsive sizing */}
         <div className="relative w-full overflow-hidden rounded-lg shadow-lg aspect-video xl:aspect-auto xl:h-[580px]">
           <Image
-            src="/assets/contact/map.png"
+            src="/assets/contact/accraMap.png"
             alt="Map of Accra, Ghana"
             fill
             className="object-cover"

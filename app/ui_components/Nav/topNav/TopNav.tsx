@@ -23,7 +23,7 @@ export const Topbar = () => {
                 <RiMailFill />
               </div>
               <p className="text-white font-light">
-                accrametrosewege@hotmal.com
+                info@accrametrosewerage.com
               </p>
             </div>
           </div>

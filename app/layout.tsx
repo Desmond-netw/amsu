@@ -35,9 +35,9 @@ export default function RootLayout({
         className={`${inter.variable} text-slate-700 ${roboto.variable} antialiased`}
       >
         <Theme>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen gap-8">
             <Navbar />
-            <main className="flex-grow">
+            <main className="flex-grow pb-8 mb-4">
               <Container>{children}</Container>{" "}
               {/* Wrap children with Container for consistent layout */}
             </main>

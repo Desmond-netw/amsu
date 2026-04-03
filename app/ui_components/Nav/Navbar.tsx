@@ -20,11 +20,11 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="relative w-full">
+    <div className=" w-full">
       {/* Topbar stays at the absolute top */}
       <Topbar />
 
-      {/* Main Navbar: Sticks to the top when Topbar is scrolled past */}
+      {/* Main Navbar: Below the topbar */}
       <header className="bg-gray-100 border-b-2 border-brand_1-300 py-3 sticky top-0 z-50 shadow-sm transition-all">
         <div className="container mx-auto px-4">
           <div className="w-full flex items-center justify-between">

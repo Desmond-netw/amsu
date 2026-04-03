@@ -1,4 +1,5 @@
 import { RiPhoneFill, RiMailFill } from "react-icons/ri";
+import { AiFillClockCircle } from "react-icons/ai";
 import Socials from "../../Socials/Socials";
 export const Topbar = () => {
   return (
@@ -15,7 +16,9 @@ export const Topbar = () => {
               <div className="w-8 h-8 bg-primary text-white flex justify-center items-center">
                 <RiPhoneFill />
               </div>
-              <p className="text-white font-light">+234 0000000000</p>
+              <p className="text-white font-light">
+                +233 (0) 302 234944, 0302 228791
+              </p>
             </div>
             {/* --------- mail */}
             <div className="flex items-center gap-3">
@@ -24,6 +27,14 @@ export const Topbar = () => {
               </div>
               <p className="text-white font-light">
                 info@accrametrosewerage.com
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-primary text-white flex justify-center items-center">
+                <AiFillClockCircle />
+              </div>
+              <p className="text-white font-light">
+                Monday - Friday: 08:00am – 17:00pm
               </p>
             </div>
           </div>

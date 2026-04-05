@@ -25,7 +25,7 @@ const socialMediaLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-brand_1-800 text-brand_1-50 py-4 text-brand_1-100">
+    <footer className="bg-brand_1-800 py-4 text-brand_1-100">
       <Container>
         {/*  Footer content  */}
         <div className="flex flex-col md:flex-row justify-between pt-4 pb-10">

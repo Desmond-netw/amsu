@@ -9,21 +9,21 @@ const projectData = [
     title: "Waste Stabilization Pond",
     description:
       "Waste Stabilization Ponds (WSP) have proven to be effective for treating wastewater, and the construction of low energy-consuming ecosystems that use natural processes...",
-    imageUrl: "/assets/projectmini/thumb1.jpg",
+    imageUrl: "./assets/projectmini/thumb1.jpg",
   },
   {
     id: 2,
     title: "Laboratory and Testing Services",
     description:
       "Physicochemical parameters such as pH, temperature, BOD, COD, TSS, DO, nutrients, and more are monitored to assess wastewater quality...",
-    imageUrl: "/assets/projectmini/thumb1.jpg",
+    imageUrl: "./assets/projectmini/thumb1.jpg",
   },
   {
     id: 3,
     title: "Sewerage machinery and vehicles",
     description:
       "Our range of sewerage vehicles and machines are essential for the efficient operation and maintenance of wastewater collection systems...",
-    imageUrl: "/assets/projectmini/thumb3.jpg",
+    imageUrl: "./assets/projectmini/thumb3.jpg",
   },
 ];
 

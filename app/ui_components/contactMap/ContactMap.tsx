@@ -112,7 +112,7 @@ const ContactMapSection = () => {
             {/*=============== Map Image ============== */}
             <div className="mt-6 relative">
               <Image
-                src="/assets/contact/accraMap.png"
+                src="./assets/contact/accraMap.png"
                 alt="Contact Map"
                 width={600}
                 height={400}

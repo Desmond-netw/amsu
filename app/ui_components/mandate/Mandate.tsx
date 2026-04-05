@@ -6,7 +6,7 @@ const Mandate = () => {
       className="
         relative 
         py-16 px-6 xl:px-24 
-        bg-[url('/assets/mandate/bg.jpg')]
+        bg-[url('./assets/mandate/bg.jpg')]
         bg-cover bg-center bg-no-repeat
         mb-10 
         xl:mb-32

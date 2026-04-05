@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   output: "export",
-  basePath: "/Desmond-netw.github.io/amsu",
+  basePath: isProd ? "/amsu" : "",
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

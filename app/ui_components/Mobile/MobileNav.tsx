@@ -17,10 +17,12 @@ import Socials from "../Socials/Socials";
 
 const links = [
   { name: "home", path: "/" },
-  { name: "about", path: "/about" },
+  { name: "about", path: "/aboutus" },
   { name: "services", path: "/services" },
-  { name: "projects", path: "/projects" },
+  { name: "vision", path: "/vision" },
+  { name: "caseStudies", path: "/caseStudies" },
   { name: "contact", path: "/contact" },
+  { name: "request", path: "/request" },
 ];
 
 const MobileNav = () => {

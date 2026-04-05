@@ -3,13 +3,11 @@
 import Link from "next/link";
 import { RiToolsFill } from "react-icons/ri";
 
-interface UnderDevelopmentPageProps {
+interface UnderDevelopmentProps {
   text: string;
 }
 
-const UnderDevelopmentPage: React.FC<UnderDevelopmentPageProps> = ({
-  text,
-}) => {
+const UnderDevelopment = ({ text }: UnderDevelopmentProps) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gray-100">
       <div className="bg-white shadow-xl rounded-xl p-10 max-w-md w-full">
@@ -43,4 +41,4 @@ const UnderDevelopmentPage: React.FC<UnderDevelopmentPageProps> = ({
   );
 };
 
-export default UnderDevelopmentPage;
+export default UnderDevelopment;

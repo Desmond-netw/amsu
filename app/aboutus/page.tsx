@@ -1,6 +1,6 @@
 import UnderDevelopmentPage from "../projects/page";
 const aboutPage = () => {
-  return <UnderDevelopmentPage />;
+  return <UnderDevelopmentPage text="About" />;
 };
 
 export default aboutPage;

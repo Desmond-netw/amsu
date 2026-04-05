@@ -13,7 +13,7 @@ const Logo = ({ width, height }: LogoProps) => {
     <Link href="/" className="flex items-center gap-2">
       {/* Ensure the path /logo.png exists in your /public folder */}
       <Image
-        src="/assets/logo/logo.png"
+        src="./assets/logo/logo.png"
         alt="AMSU Logo"
         width={width || 50}
         height={height || 50}

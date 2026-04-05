@@ -23,7 +23,7 @@
   },
   "include": [
     "next-env.d.ts",
-    "swiper.d.ts",
+    "typestring.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"

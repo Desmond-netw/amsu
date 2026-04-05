@@ -22,6 +22,11 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "AMSU",
   description: "sewerage management system for Accra Metro",
+  icons: {
+    icon: "./favicon.png",
+    shortcut: "./favicon.png",
+    apple: "./favicon.png",
+  },
 };
 
 export default function RootLayout({

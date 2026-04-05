@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/Desmond-netwa.github.io/amsu/",
+  basePath: "/Desmond-netw.github.io/amsu",
   images: {
     unoptimized: true,
   },

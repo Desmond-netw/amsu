@@ -9,11 +9,12 @@ import Topbar from "../Nav/topNav/TopNav";
 
 const links = [
   { name: "home", path: "/" },
-  { name: "about", path: "/about" },
+  { name: "about", path: "/aboutus" },
   { name: "services", path: "/services" },
   { name: "vision", path: "/vision" },
-  { name: "projects", path: "/projects" },
+  { name: "caseStudies", path: "/caseStudies" },
   { name: "contact", path: "/contact" },
+  { name: "request", path: "/request" },
 ];
 
 export const Navbar = () => {

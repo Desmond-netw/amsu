@@ -1,5 +1,5 @@
 "use client";
-
+// ================== This is a page Template for pages that are under development ==================
 import Link from "next/link";
 import { RiToolsFill } from "react-icons/ri";
 

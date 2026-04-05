@@ -13,8 +13,6 @@ const statsData = [
 
 const Stats = () => {
   const ref = useRef(null);
-
-  // Correct spelling: threshold
   const inView = useInView(ref, { amount: 0.2 });
 
   return (
@@ -39,7 +37,15 @@ const Stats = () => {
           {statsData.map((item, index) => (
             <div key={index} className="w-full">
               {/* Number */}
-              <div className="text-5xl font-bold flex justify-center items-baseline gap-1">
+              <div
+                className="
+                text-3xl 
+                sm:text-4xl 
+                md:text-5xl 
+                font-bold 
+                flex justify-center items-baseline gap-1
+              "
+              >
                 {inView && (
                   <CountUp
                     start={0}
@@ -52,7 +58,16 @@ const Stats = () => {
               </div>
 
               {/* Label */}
-              <p className="mt-2 text-brand_1-50 text-lg tracking-wide">
+              <p
+                className="
+                mt-2 
+                text-brand_1-50 
+                text-sm 
+                sm:text-base 
+                md:text-lg 
+                tracking-wide
+              "
+              >
                 {item.text}
               </p>
 

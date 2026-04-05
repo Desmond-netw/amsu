@@ -182,12 +182,12 @@ const ContactMapSection = () => {
                   />
                 </Box>
                 {/* --Subject -- */}
-                <Box className=" min-w-[200px] lg:w-full">
+                <Box className="min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Subject
                   </Text>
                   <TextField.Root
-                    type="email"
+                    type="text" // Fixed from "email"
                     size={{ initial: "1", md: "2", lg: "3" }}
                     placeholder="Subject: Inquiry about services"
                   />
@@ -203,9 +203,13 @@ const ContactMapSection = () => {
                   />
                 </Box>
               </Flex>
-              <Flex items-center justify="center">
-                {" "}
-                <Button color="cyan" variant="solid" size="4">
+              <Flex align="center" justify="center" mt="4">
+                <Button
+                  color="cyan"
+                  variant="solid"
+                  size="4"
+                  className="cursor-pointer"
+                >
                   Send Message
                 </Button>
               </Flex>

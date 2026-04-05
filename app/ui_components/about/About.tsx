@@ -35,7 +35,7 @@ export const About = () => {
                 development.
               </p>
 
-              <p className="mt-4 text-secondary leading-relaxed max-w-xl font-secondary">
+              <p className="hidden md:block mt-4 text-secondary leading-relaxed max-w-xl font-secondary">
                 We place strong emphasis on monitoring and maintenance, to
                 enhance operational efficiency and environmental protection.
                 Through strategic partnerships, community engagement, and

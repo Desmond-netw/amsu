@@ -151,7 +151,7 @@ const ContactMapSection = () => {
             <form className="flex flex-col gap-4 py-4">
               <Flex direction="column" gap="2">
                 {/* --Name -- */}
-                <Box className=" min-w-[300px] lg:w-full">
+                <Box className=" min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Name
                   </Text>
@@ -161,7 +161,7 @@ const ContactMapSection = () => {
                   />
                 </Box>
                 {/* --Phone -- */}
-                <Box className=" min-w-[300px] lg:w-full">
+                <Box className=" min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Phone
                   </Text>
@@ -171,7 +171,7 @@ const ContactMapSection = () => {
                   />
                 </Box>
                 {/* --Email -- */}
-                <Box className=" min-w-[300px] lg:w-full">
+                <Box className=" min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Email
                   </Text>
@@ -182,7 +182,7 @@ const ContactMapSection = () => {
                   />
                 </Box>
                 {/* --Subject -- */}
-                <Box className=" min-w-[300px] lg:w-full">
+                <Box className=" min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Subject
                   </Text>
@@ -193,7 +193,7 @@ const ContactMapSection = () => {
                   />
                 </Box>
                 {/* --Message -- */}
-                <Box className=" min-w-[300px] lg:w-full">
+                <Box className=" min-w-[200px] lg:w-full">
                   <Text as="label" size="2" weight="medium" className="mb-1">
                     Message
                   </Text>

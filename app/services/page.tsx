@@ -22,11 +22,6 @@ const servicesData = [
     link: "/services/repair",
   },
   {
-    title: "Customer Service and Support",
-    bgImage: "./assets/services/service-thumb_1.webp",
-    link: "/services/customer-support",
-  },
-  {
     title: "Industrial Wastewater Treatment",
     bgImage: "./assets/services/service-thumb_1.webp",
     link: "/services/industrial-treatment",
@@ -35,6 +30,11 @@ const servicesData = [
     title: "Sewerage Network Design and Construction",
     bgImage: "./assets/services/service-thumb_1.webp",
     link: "/services/consultation",
+  },
+  {
+    title: "Customer Service and Support",
+    bgImage: "./assets/services/service-thumb_1.webp",
+    link: "/services/customer-support",
   },
 ];
 

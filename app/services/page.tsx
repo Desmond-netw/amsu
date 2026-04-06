@@ -28,7 +28,7 @@ const servicesData = [
   },
   {
     title: "Sewerage Network Design and Construction",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "./assets/services/construction/construction-0.webp",
     link: "/services/construction",
   },
   {

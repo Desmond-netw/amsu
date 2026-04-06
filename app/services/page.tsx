@@ -29,7 +29,7 @@ const servicesData = [
   {
     title: "Sewerage Network Design and Construction",
     bgImage: "./assets/services/service-thumb_1.webp",
-    link: "/services/consultation",
+    link: "/services/construction",
   },
   {
     title: "Customer Service and Support",

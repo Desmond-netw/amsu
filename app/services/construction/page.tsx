@@ -1,6 +1,6 @@
 import ServiceDetail from "../serviceDetail";
 
-export default function ConsultationPage() {
+export default function ConstructionPage() {
   return (
     <ServiceDetail
       title="Sewerage Network Design and Construction"

@@ -2,6 +2,7 @@ import Pretitle from "@/app/ui_components/pretitle/Pretitile";
 import ServiceDetail from "../serviceDetail";
 // import Container from "@/app/ui_components/Container";
 import Image from "next/image";
+import Button from "@/app/ui_components/button/button";
 
 export default function ConstructionPage() {
   return (
@@ -11,7 +12,7 @@ export default function ConstructionPage() {
         description="Our engineering team provides expert consultation, design, and construction services for sewerage networks of all scales."
       />
       {/* --- Two Side Image & Text --- */}
-      <div className="flex flex-col md:flex-row items-center gap-8 my-8">
+      <div className="flex flex-col md:flex-row items-center sm:gap-4 sm:my-2 md:gap-8 md:my-8 bg-grey-100 p-6 rounded-lg shadow-md">
         {/* Image */}
         <div className="md:w-1/2">
           <Image
@@ -38,11 +39,13 @@ export default function ConstructionPage() {
             our clients to deliver sustainable and cost-effective sewerage
             solutions.
           </p>
+          {/* btn */}
+          <Button text="Request Quote" href="/" />
         </div>
       </div>
 
       {/*   ---- Site Photos---- */}
-      <div className="my-8">
+      <div className="my-8 flex flex-col items-center">
         <Pretitle text="Recent Projects" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5].map((num) => (

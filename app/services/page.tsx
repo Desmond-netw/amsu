@@ -44,7 +44,7 @@ const ServicesPage = () => {
       {/*---------- Banner Section -------- */}
       <div className="relative w-full h-[50vh] min-h-[140px]">
         <Image
-          src="./assets/banner/serviceBanner.webp"
+          src="/assets/banner/serviceBanner.webp"
           alt="Services Banner"
           fill
           priority
@@ -109,14 +109,14 @@ const ServicesPage = () => {
         {/* certifications and affiliations logos */}
         <div className="w-full flex flex-wrap items-center justify-center gap-6 mt-6">
           <Image
-            src="./assets/services/certifications/ghanwaterLogo.png"
+            src="/assets/services/certifications/ghanwaterLogo.png"
             alt="Ghana Water Authority"
             width={150}
             height={100}
             className="object-contain"
           />
           <Image
-            src="./assets/services/certifications/epa.png"
+            src="/assets/services/certifications/epa.png"
             alt="ISO 14001 Certification"
             width={80}
             height={100}

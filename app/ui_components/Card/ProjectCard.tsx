@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Button */}
         <div className="px-4 pb-4">
-          <Button text="Read More" />
+          <Button text="Read More" linkstring="/caseStudies" />
         </div>
       </Card>
     </Box>

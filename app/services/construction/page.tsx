@@ -40,7 +40,7 @@ export default function ConstructionPage() {
             solutions.
           </p>
           {/* btn */}
-          <Button text="Request Quote" href="/" />
+          <Button text="Request Quote" linkstring="/services" />
         </div>
       </div>
 

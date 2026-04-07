@@ -6,13 +6,13 @@ import { RiArrowRightFill } from "react-icons/ri";
 
 interface ButtonProps {
   text: string;
-  href: string; // route link
+  linkstring: string; // route link
 }
 
-const Button = ({ text, href }: ButtonProps) => {
+const Button = ({ text, linkstring }: ButtonProps) => {
   return (
     <Link
-      href={href}
+      href={linkstring}
       className="
         w-full sm:w-52 
         h-10 sm:h-12 

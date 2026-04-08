@@ -8,32 +8,32 @@ import Pretitle from "../ui_components/pretitle/Pretitile";
 const servicesData = [
   {
     title: "Sewerage Collection and Treatment",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/service-thumb_1.webp",
     link: "/services/treatment",
   },
   {
     title: "Wastewater Management",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/service-thumb_1.webp",
     link: "/services/wastewater",
   },
   {
     title: "Sewer Network Maintenance and Repair",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/service-thumb_1.webp",
     link: "/services/repair",
   },
   {
     title: "Industrial Wastewater Treatment",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/service-thumb_1.webp",
     link: "/services/industrial-treatment",
   },
   {
     title: "Sewerage Network Design and Construction",
-    bgImage: "./assets/services/construction/construction-0.webp",
+    bgImage: "/assets/services/construction/construction-0.webp",
     link: "/services/construction",
   },
   {
     title: "Customer Service and Support",
-    bgImage: "./assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/service-thumb_1.webp",
     link: "/services/customer-support",
   },
 ];

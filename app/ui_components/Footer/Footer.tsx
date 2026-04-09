@@ -125,8 +125,8 @@ export const Footer = () => {
             <Flex align="center" gap="2">
               <Avatar
                 size={{ initial: "5", md: "7", lg: "8", xl: "9" }}
-                src="./assets/logo/logo.png"
-                fallback="A"
+                src="/assets/logo/logo.png"
+                fallback="AMSU"
               />
             </Flex>
           </div>

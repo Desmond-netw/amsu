@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/amsu" : "",
-  assetPrefix: isProd ? "/amsu/" : "",
+  // basePath: isProd ? "/amsu" : "",  only use for github pages
+  // assetPrefix: isProd ? "/amsu/" : "",  only use for github pages
   trailingSlash: true,
   images: {
     unoptimized: true,

@@ -18,7 +18,7 @@ const servicesData = [
   },
   {
     title: "Sewer Network Maintenance and Repair",
-    bgImage: "/assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/maintenance/maintenance-0.png",
     link: "/services/repair",
   },
   {

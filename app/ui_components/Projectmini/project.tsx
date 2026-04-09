@@ -9,7 +9,7 @@ const projectData = [
     title: "Waste Stabilization Pond",
     description:
       "Waste Stabilization Ponds (WSP) have proven to be effective for treating wastewater, and the construction of low energy-consuming ecosystems that use natural processes...",
-    imageUrl: "./assets/projectmini/thumb1.jpg",
+    imageUrl: "./assets/projectmini/thumb2.webp",
   },
   {
     id: 2,

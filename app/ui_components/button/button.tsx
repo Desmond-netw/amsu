@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+// useage : <Button text="Learn More" href="/services/treatment" />
+
+import Link from "next/link";
 import { RiArrowRightFill } from "react-icons/ri";
 
-const Button = ({ text }: { text: string }) => {
+interface ButtonProps {
+  text: string;
+  linkstring: string; // route link
+}
+
+const Button = ({ text, linkstring }: ButtonProps) => {
   return (
-    <div
+    <Link
+      href={linkstring}
       className="
         w-full sm:w-52 
         h-10 sm:h-12 
@@ -30,7 +39,7 @@ const Button = ({ text }: { text: string }) => {
       {/* Arrow Box */}
       <div
         className="
-          w-8 h-8 sm:w-11 sm:h-11 
+          w-8 h-8 sm:w-4 sm:h-4
           bg-white 
           flex items-center justify-center 
           rounded-md
@@ -42,13 +51,13 @@ const Button = ({ text }: { text: string }) => {
         <RiArrowRightFill
           className="
             text-brand_1-700 
-            text-lg sm:text-xl 
+            text-lg sm:text-sm md:text-base 
             transition-all duration-300 
             group-hover:rotate-45
           "
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -11,7 +11,7 @@ const links = [
   { name: "home", path: "/" },
   { name: "about", path: "/aboutus" },
   { name: "services", path: "/services" },
-  { name: "vision", path: "/vision" },
+  { name: "stations", path: "/Pumps Stations" },
   { name: "caseStudies", path: "/caseStudies" },
   { name: "contact", path: "/contact" },
   { name: "request", path: "/request" },
@@ -43,11 +43,11 @@ export const Navbar = () => {
                         href={link.path}
                         className={`
                           relative text-sm font-bold uppercase tracking-wider transition-all duration-300
-                          hover:text-blue-600
-                          ${isActive ? "text-blue-600" : "text-slate-700"}
+                          hover:text-brand_1-600
+                          ${isActive ? "text-brand_1-600" : "text-slate-700"}
                           /* Underline animation */
                           after:content-[''] after:absolute after:-bottom-1 after:left-0 
-                          after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all
+                          after:w-0 after:h-[2px] after:bg-brand_1-600 after:transition-all
                           hover:after:w-full ${isActive ? "after:w-full" : ""}
                         `}
                       >

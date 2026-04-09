@@ -8,12 +8,13 @@ interface LogoProps {
   height?: number;
 }
 
+const logoImagePath = "/assets/logo/logo.png"; // Ensure this path is correct and the image exists in the /public folder
 const Logo = ({ width, height }: LogoProps) => {
   return (
     <Link href="/" className="flex items-center gap-2">
       {/* Ensure the path /logo.png exists in your /public folder */}
       <Image
-        src="./assets/logo/logo.png"
+        src={logoImagePath}
         alt="AMSU Logo"
         width={width || 50}
         height={height || 50}

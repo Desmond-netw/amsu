@@ -10,7 +10,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <div className="relative h-[42vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-slate-900">
         <Image
-          src="/assets/about us/Hero.webp"
+          src="/assets/aboutUs/Hero.webp"
           alt="About AMSU"
           fill
           className="object-cover brightness-75"

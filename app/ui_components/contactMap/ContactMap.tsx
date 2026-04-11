@@ -14,7 +14,7 @@ import {
 import { RiPhoneFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { ImLocation2 } from "react-icons/im";
-import Pretitle from "../pretitle/Pretitile";
+
 import Container from "../Container";
 
 const ContactMapSection = () => {
@@ -26,11 +26,10 @@ const ContactMapSection = () => {
         width="auto"
       >
         {/* -----------  Contact Info and Map Image */}
-        <Box>
+        <Box className="bg-gray-100 rounded-sm px-8 py-8">
           <Flex direction="column" gap="4">
             {/*================   Contact Info =============*/}
             <Box>
-              <Pretitle text="Get In Touch" />
               <Heading size={{ initial: "1", md: "2", lg: "4" }}>
                 {" "}
                 Contact Information
@@ -112,7 +111,7 @@ const ContactMapSection = () => {
             {/*=============== Map Image ============== */}
             <div className="mt-6 relative">
               <Image
-                src="./assets/contact/accraMap.png"
+                src="/assets/contact/accraMap.png"
                 alt="Contact Map"
                 width={600}
                 height={400}
@@ -139,7 +138,7 @@ const ContactMapSection = () => {
           </Flex>
         </Box>
         {/*-- Temporary Contact Form  */}
-        <Box maxWidth="600px">
+        <Box maxWidth="600px  rounded-sm px-6">
           <div className=" w-full h-full border border-brand_1-100 box-border shadow-md p-6 rounded-md">
             <Heading size={{ initial: "2", md: "4" }} className="mb-4">
               Send Us a Message

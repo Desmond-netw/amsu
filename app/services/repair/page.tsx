@@ -16,7 +16,7 @@ export default function ConstructionPage() {
         {/* Image */}
         <div className="md:w-1/2">
           <Image
-            src="/assets/services/maintenance/maintenance-1.png"
+            src="/assets/services/maintenance/maintenance-1.jpg"
             alt="Sewerage Construction"
             width={600}
             height={400}
@@ -47,7 +47,7 @@ export default function ConstructionPage() {
       <div className="my-8 flex flex-col items-center">
         <Pretitle text="Recent Projects" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3, 4].map((num) => (
+          {[2, 3, 4].map((num) => (
             <Image
               key={num}
               src={`/assets/services/maintenance/maintenance-${num}.png`}

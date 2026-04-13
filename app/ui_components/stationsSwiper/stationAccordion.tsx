@@ -31,7 +31,7 @@ const StationsAccordion = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-12 px-4">
+    <div className="max-w-4xl mx-auto my-12 px-4 bg-brand_1-50">
       <h2 className="text-2xl font-bold text-brand_1-800 mb-6 text-center">
         Regional Pumping Station Directory
       </h2>

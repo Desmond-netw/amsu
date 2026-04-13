@@ -12,7 +12,7 @@ const links = [
   { name: "about", path: "/aboutus" },
   { name: "services", path: "/services" },
   { name: "pump stations", path: "/pumpStations" },
-  { name: "caseStudies", path: "/caseStudies" },
+  { name: "Projects", path: "/projects" },
   { name: "contact", path: "/contact" },
   { name: "request", path: "/request" },
 ];

@@ -31,7 +31,7 @@ const StationsPage = () => {
       <section className="relative z-20 bg-white py-16">
         <Container>
           <div className="mb-12 text-center">
-            <h2 className="text-lg sm:text-base  md:text-3xl font-semibold text-brand_1-800">
+            <h2 className="text-3xl font-semibold text-brand_1-800">
               Transfer Pumping Stations in Accra
             </h2>
             <span className="block w-24 h-1 bg-brand_1-500 mx-auto mt-4"></span>

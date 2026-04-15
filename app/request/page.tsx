@@ -79,6 +79,29 @@ const RequestPage = () => {
                     />
                   </div>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">
+                      Type of Facility
+                    </label>
+                    <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none">
+                      <option>Indivdual</option>
+                      <option>Private(Company)</option>
+                      <option>Public</option>
+                    </select>
+                  </div>
+                  {/* Location */}
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">
+                      Prefered Date
+                    </label>
+                    <input
+                      type="date"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
+                    />
+                  </div>
+                </div>
 
                 {/* Message */}
                 <div>
@@ -114,7 +137,9 @@ const RequestPage = () => {
                       <p className="text-sm text-brand_1-200 uppercase font-bold tracking-wider">
                         Call Us
                       </p>
-                      <p className="text-lg">+233 (0) 302 123 456</p>
+                      <p className="text-lg">
+                        +233 (0)302 123 456 /302 654 321
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -123,7 +148,7 @@ const RequestPage = () => {
                       <p className="text-sm text-brand_1-200 uppercase font-bold tracking-wider">
                         Office
                       </p>
-                      <p className="text-lg">Ministries, Accra</p>
+                      <p className="text-lg">AMSU, Accra</p>
                     </div>
                   </div>
                 </div>

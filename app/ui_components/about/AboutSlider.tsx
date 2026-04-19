@@ -17,7 +17,7 @@ const AboutSlider = () => {
       {/* Slide 1 */}
       <SwiperSlide>
         <Image
-          src="./assets/slider/about/slider1.webp"
+          src="/assets/slider/about/slider1.webp"
           fill
           alt="About image 1"
           className="object-cover"
@@ -27,7 +27,7 @@ const AboutSlider = () => {
       {/* Slide 2 */}
       <SwiperSlide>
         <Image
-          src="./assets/slider/about/slider2.webp"
+          src="/assets/slider/about/slider2.webp"
           fill
           alt="About image 2"
           className="object-cover"
@@ -37,7 +37,7 @@ const AboutSlider = () => {
       {/* Slide 3 */}
       <SwiperSlide>
         <Image
-          src="./assets/slider/about/slider3.webp"
+          src="/assets/slider/about/slider3.webp"
           fill
           alt="About image 3"
           className="object-cover"
@@ -46,7 +46,7 @@ const AboutSlider = () => {
       {/* Slide 4 */}
       <SwiperSlide>
         <Image
-          src="./assets/slider/about/slider4.webp"
+          src="/assets/slider/about/slider4.webp"
           fill
           alt="About image 4"
           className="object-cover"

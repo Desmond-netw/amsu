@@ -1,6 +1,7 @@
 "use client";
 
-import { RiMailSendLine } from "react-icons/ri";
+import { MdSend } from "react-icons/md";
+
 import { ScrollArea } from "@radix-ui/themes";
 
 const CreateRequestForm = () => {
@@ -118,7 +119,7 @@ const CreateRequestForm = () => {
               transition-all flex items-center justify-center gap-2
             "
           >
-            <RiMailSendLine className="text-xl" />
+            <MdSend className="text-xl" />
             Submit Request
           </button>
         </div>

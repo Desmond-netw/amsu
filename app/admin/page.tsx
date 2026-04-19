@@ -1,31 +1,10 @@
 "use client";
 
-import { UserButton, useAuth } from "@clerk/nextjs"; // Combined imports
+import { UserButton } from "@clerk/nextjs";
+import StatCard from "@/app/admin/components/StatCard";
 import { FiActivity, FiUsers, FiFolder } from "react-icons/fi";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function AdminDashboard() {
-  // 1. Extract 'userId' alongside isLoaded and isSignedIn
-  const { isLoaded, isSignedIn, userId } = useAuth();
-  const router = useRouter();
-
-  useEffect(() => {
-    // 2. Use 'isSignedIn' or 'userId' to check for auth status
-    if (isLoaded && !isSignedIn) {
-      router.push("/sign-in");
-    }
-  }, [isLoaded, isSignedIn, router]);
-
-  // 3. Prevent the page from flickering while checking auth
-  if (!isLoaded || !isSignedIn) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <p className="text-slate-500 animate-pulse">Loading security...</p>
-      </div>
-    );
-  }
-
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -40,7 +19,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* User Account */}
-        <UserButton afterSignOutUrl="/" />
+        <UserButton fallback="/" />
       </div>
 
       {/* Stats Grid */}
@@ -49,64 +28,20 @@ export default function AdminDashboard() {
           title="Active Requests"
           value="12"
           color="blue"
-          icon={<FiActivity size={20} />}
+          icon={<FiActivity />}
         />
         <StatCard
           title="Total Customers"
           value="48"
           color="green"
-          icon={<FiUsers size={20} />}
+          icon={<FiUsers />}
         />
         <StatCard
           title="Recent Projects"
           value="5"
           color="purple"
-          icon={<FiFolder size={20} />}
+          icon={<FiFolder />}
         />
-      </div>
-    </div>
-  );
-}
-
-function StatCard({
-  title,
-  value,
-  color,
-  icon,
-}: {
-  title: string;
-  value: string;
-  color: string;
-  icon: React.ReactNode;
-}) {
-  const colorMap: Record<string, string> = {
-    blue: "bg-blue-100 text-blue-600",
-    green: "bg-green-100 text-green-600",
-    purple: "bg-purple-100 text-purple-600",
-  };
-
-  return (
-    <div
-      className="
-        bg-white p-6 rounded-xl shadow-sm border border-slate-200
-        hover:shadow-md transition-all duration-300
-      "
-    >
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-sm font-medium text-slate-500 uppercase">
-            {title}
-          </p>
-          <p className="text-3xl font-bold mt-2 text-slate-900">{value}</p>
-        </div>
-
-        <div
-          className={`w-12 h-12 flex items-center justify-center rounded-lg ${
-            colorMap[color] || "bg-gray-100 text-gray-600"
-          }`}
-        >
-          {icon}
-        </div>
       </div>
     </div>
   );

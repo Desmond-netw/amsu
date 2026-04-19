@@ -1,9 +1,31 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useAuth } from "@clerk/nextjs"; // Combined imports
 import { FiActivity, FiUsers, FiFolder } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function AdminDashboard() {
+  // 1. Extract 'userId' alongside isLoaded and isSignedIn
+  const { isLoaded, isSignedIn, userId } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    // 2. Use 'isSignedIn' or 'userId' to check for auth status
+    if (isLoaded && !isSignedIn) {
+      router.push("/sign-in");
+    }
+  }, [isLoaded, isSignedIn, router]);
+
+  // 3. Prevent the page from flickering while checking auth
+  if (!isLoaded || !isSignedIn) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-slate-500 animate-pulse">Loading security...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -27,19 +49,19 @@ export default function AdminDashboard() {
           title="Active Requests"
           value="12"
           color="blue"
-          icon={<FiActivity />}
+          icon={<FiActivity size={20} />}
         />
         <StatCard
           title="Total Customers"
           value="48"
           color="green"
-          icon={<FiUsers />}
+          icon={<FiUsers size={20} />}
         />
         <StatCard
           title="Recent Projects"
           value="5"
           color="purple"
-          icon={<FiFolder />}
+          icon={<FiFolder size={20} />}
         />
       </div>
     </div>
@@ -79,7 +101,9 @@ function StatCard({
         </div>
 
         <div
-          className={`w-12 h-12 flex items-center justify-center rounded-lg ${colorMap[color]}`}
+          className={`w-12 h-12 flex items-center justify-center rounded-lg ${
+            colorMap[color] || "bg-gray-100 text-gray-600"
+          }`}
         >
           {icon}
         </div>

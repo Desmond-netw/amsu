@@ -62,7 +62,7 @@ export const About = () => {
           <div className="flex-1 flex justify-center">
             <div className="relative w-full h-[300px] sm:h[360px] md:h-[420px] xl:w-[444px] xl:h-[493px]">
               {/* Accent background */}
-              <div className="hidden xl:flex w-[444px] h-[493px] bg-brand_1-400 absolute -top-4 -left-4 -z-10 rounded-lg"></div>
+              <div className="hidden xl:flex w-[444px] h-[493px] bg-gray-300 absolute -top-4 -left-4 -z-10 rounded-lg"></div>
 
               {/* Slider */}
               <AboutSlider />

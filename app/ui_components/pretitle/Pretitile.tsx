@@ -11,15 +11,15 @@ const Pretitle: React.FC<PretitleProps> = ({ text, center }) => {
       }`}
     >
       {/* Left Accent */}
-      <div className="w-3 h-[3px] rounded-full bg-brand_1-500" />
+      <div className="w-3 h-[3px] rounded-full bg-amber-950" />
 
       {/* Text */}
-      <p className="font-primary tracking-[3.2px] uppercase text-brand_1-700">
+      <p className="font-primary font-semibold tracking-[3.2px] uppercase text-brand_1-900">
         {text}
       </p>
 
       {/* Right Accent */}
-      <div className="w-3 h-[3px] rounded-full bg-brand_1-500" />
+      <div className="w-3 h-[3px] rounded-full bg-amber-950" />
     </div>
   );
 };

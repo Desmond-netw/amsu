@@ -3,8 +3,14 @@
 import * as Clerk from "@clerk/elements/common";
 import * as SignIn from "@clerk/elements/sign-in";
 import Logo from "../../ui_components/logo/Logo";
+import { useUser } from "@clerk/nextjs";
 
 const LoginPage = () => {
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  console.log("User:", user);
+  console.log("Is Loaded:", isLoaded);
+  console.log("Is Signed In:", isSignedIn);
   return (
     <div className="h-screen w-full flex bg-slate-100">
       {/* Left Branding Panel */}

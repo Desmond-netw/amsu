@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import Sidebar from "../ui_components/adminUI/Sidebar";
+import Sidebar from "./Sidebar";
 
 export default async function AdminLayout({
   children,

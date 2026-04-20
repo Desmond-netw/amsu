@@ -72,7 +72,7 @@ const Stats = () => {
               </p>
 
               {/* Accent underline */}
-              <div className="mt-3 mx-auto w-12 h-[3px] bg-brand_1-300 rounded-full"></div>
+              {/* <div className="mt-3 mx-auto w-12 h-[3px] bg- rounded-full"></div> */}
             </div>
           ))}
         </div>

@@ -24,11 +24,11 @@ const Mandate = () => {
           </h2>
 
           {/* Brand underline */}
-          <div className="w-20 h-1 bg-brand_1-400 mx-auto xl:mx-0 rounded-full"></div>
+          <div className="w-20 h-1 bg-red-950 mx-auto xl:mx-0 rounded-full"></div>
         </div>
 
         {/* Divider */}
-        <div className="hidden xl:block w-px h-40 bg-brand_1-400"></div>
+        <div className="hidden xl:block w-px h-40 bg-white"></div>
 
         {/* Text Content */}
         <div className="xl:w-2/3 text-white">

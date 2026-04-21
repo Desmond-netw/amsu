@@ -1,7 +1,7 @@
 import { PrismaClient, UserSex } from "@prisma/client";
 
 // Define it manually if the import doesn't work due to the way enums are generated
-type UserSex = "MALE" | "FEMALE";
+// type UserSex = "MALE" | "FEMALE";
 
 const prisma = new PrismaClient();
 

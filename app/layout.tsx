@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Theme } from "@radix-ui/themes";
 import { Inter, Roboto } from "next/font/google";
-
+import { ClerkProvider } from "@clerk/nextjs";
 import { Navbar } from "./ui_components/Nav/Navbar";
 import { Footer } from "./ui_components/Footer/Footer";
 import Container from "./ui_components/Container";
@@ -39,16 +39,18 @@ export default function RootLayout({
       <body
         className={`${inter.variable} text-slate-700 ${roboto.variable} antialiased`}
       >
-        <Theme>
-          <div className="flex flex-col min-h-screen gap-8">
-            <Navbar />
-            <main className="flex-grow pb-8 mb-4">
-              <Container>{children}</Container>{" "}
-              {/* Wrap children with Container for consistent layout */}
-            </main>
-            <Footer />
-          </div>
-        </Theme>
+        <ClerkProvider>
+          <Theme>
+            <div className="flex flex-col min-h-screen gap-8">
+              <Navbar />
+              <main className="flex-grow pb-8 mb-4">
+                <Container>{children}</Container>{" "}
+                {/* Wrap children with Container for consistent layout */}
+              </main>
+              <Footer />
+            </div>
+          </Theme>
+        </ClerkProvider>
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ export const About = () => {
           {/* LEFT — TEXT */}
           <div className="flex-1 relative">
             <div className="absolute inset-0 bg-[url('/assets/banner/aboutpumps.webp')] bg-cover bg-center blur-sm rounded-lg"></div>
-            <div className="relative z-10 max-w-135 sm:px-4 md:px-4 p-6 bg-gray-100 bg-opacity-80 rounded-lg">
+            <div className="relative z-10 max-w-135 sm:px-4 md:px-4 p-6 bg-gray-100 bg-opacity-80 rounded-lg gap-4">
               <Pretitle text="Who We Are" center={false} />
 
               <h2 className="h2 mt-4 text-primary">
@@ -62,7 +62,7 @@ export const About = () => {
           <div className="flex-1 flex justify-center">
             <div className="relative w-full h-[300px] sm:h[360px] md:h-[420px] xl:w-[444px] xl:h-[493px]">
               {/* Accent background */}
-              <div className="hidden xl:flex w-[444px] h-[493px] bg-brand_1-400 absolute -top-4 -left-4 -z-10 rounded-lg"></div>
+              <div className="hidden xl:flex w-[444px] h-[493px] bg-gray-300 absolute -top-4 -left-4 -z-10 rounded-lg"></div>
 
               {/* Slider */}
               <AboutSlider />

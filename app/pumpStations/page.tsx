@@ -14,7 +14,7 @@ const StationsPage = () => {
         }}
       >
         {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-brand_1-900/60"></div>
+        <div className="absolute inset-0 bg-slate-900/60"></div>
 
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wider">

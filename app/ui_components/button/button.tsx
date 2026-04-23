@@ -1,5 +1,5 @@
 "use client";
-// useage : <Button text="Learn More" href="/services/treatment" />
+// usage : <Button text="Learn More" linkstring="/services/treatment" />
 
 import Link from "next/link";
 import { RiArrowRightFill } from "react-icons/ri";
@@ -18,9 +18,9 @@ const Button = ({ text, linkstring }: ButtonProps) => {
         h-10 sm:h-12 
         py-2 sm:py-3 px-3 
         flex items-center justify-between group 
-        bg-brand_1-500 hover:bg-brand_1-600 active:bg-brand_1-700
-        border-2 border-brand_1-700
-        rounded-lg transition-all duration-300
+        bg-blue-600 hover:bg-blue-700 active:bg-blue-800
+        border-2 border-blue-800
+        rounded-lg transition-all duration-300 shadow-md
       "
     >
       {/* Text */}
@@ -39,18 +39,18 @@ const Button = ({ text, linkstring }: ButtonProps) => {
       {/* Arrow Box */}
       <div
         className="
-          w-8 h-8 sm:w-4 sm:h-4
+          w-8 h-8 sm:w-6 sm:h-6
           bg-white 
           flex items-center justify-center 
           rounded-md
           transition-all duration-300
-          group-hover:bg-brand_1-50
-          group-active:bg-brand_1-100
+          group-hover:bg-blue-50
+          group-active:bg-blue-100
         "
       >
         <RiArrowRightFill
           className="
-            text-brand_1-700 
+            text-blue-700 
             text-lg sm:text-sm md:text-base 
             transition-all duration-300 
             group-hover:rotate-45

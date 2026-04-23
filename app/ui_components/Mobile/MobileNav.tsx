@@ -34,7 +34,7 @@ const MobileNav = () => {
       {/* Toggle Button */}
       <SheetTrigger
         className="
-          text-brand_1-500 
+          text-slate-900 
           hover:text-brand_1-600 
           active:text-brand_1-700 
           flex items-center justify-center 
@@ -48,7 +48,7 @@ const MobileNav = () => {
       <SheetContent
         side="right"
         className="
-          bg-brand_1-500 
+          bg-slate-900/90 backdrop-blur-sm
           text-white 
           border-none 
           px-6
@@ -72,7 +72,7 @@ const MobileNav = () => {
                   href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`
-                    uppercase font-semibold tracking-[1.2px] text-lg 
+                    uppercase font-semibold text-left tracking-[1.2px] text-lg 
                     transition-colors
                     ${
                       pathname === link.path
@@ -86,7 +86,16 @@ const MobileNav = () => {
               </li>
             ))}
           </ul>
-
+          {/* login link */}
+          <div className="mt-10">
+            <Link
+              prefetch={false}
+              href="/admin"
+              className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-light rounded-md text-white bg-transparent transition-colors duration-200 shadow-sm"
+            >
+              Login / Register
+            </Link>
+          </div>
           {/* Social Icons */}
           <div className="mt-10">
             <Socials containerStyles="text-white text-xl flex gap-6" />

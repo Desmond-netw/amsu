@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Pretitle from "@/app/ui_components/pretitle/Pretitile";
+// import Pretitle from "@/app/ui_components/pretitle/Pretitile";
 import Container from "@/app/ui_components/Container";
 import { ScrollArea } from "@radix-ui/themes";
 
@@ -14,24 +14,24 @@ const ProjectsPage = () => {
       desc: "Upgrading 5km of main sewer lines to increase capacity for the growing urban population.",
     },
     {
-      title: "Treatment Plant Upgrade",
-      img: "/assets/projects/project02.jpg",
+      title: "Desludging of Sewage from exposed manholes",
+      img: "/assets/projects/project02.png",
       desc: "Implementation of advanced biological filtration systems to improve effluent quality.",
     },
     {
-      title: "Pumping Station Refurbishment",
-      img: "/assets/projects/projectsBanner.jpg",
-      desc: "Complete overhaul of electrical and mechanical components at the central pumping hub.",
+      title: "Mass concrete breaking..",
+      img: "/assets/projects/project03.webp",
+      desc: "Complete mass concrete breaking and removal of 1000m of sewer line to facilitate the construction of the new infrastructure.",
     },
     {
-      title: "Sewer Line Expansion",
-      img: "/assets/projects/project01.jpeg",
-      desc: "Upgrading 5km of main sewer lines to increase capacity for the growing urban population.",
+      title: "Pip welding and Jointing",
+      img: "/assets/projects/project05.webp",
+      desc: "Professional installation of pipelines and joints to ensure seamless integration.",
     },
     {
-      title: "Treatment Plant Upgrade",
-      img: "/assets/projects/project02.jpg",
-      desc: "Implementation of advanced biological filtration systems to improve effluent quality.",
+      title: "Replacement of Damaged Sewer Lines",
+      img: "/assets/projects/project06.png",
+      desc: "Replacement of damaged sewer lines to ensure proper functionality and prevent leaks at the Ministry of Employment.",
     },
     {
       title: "Pumping Station Refurbishment",
@@ -96,12 +96,11 @@ const ProjectsPage = () => {
         }} // Absolute path
       >
         {/* Dark Tint Overlay for text readability */}
-        <div className="absolute inset-0 bg-brand_1-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-slate-900/70 z-10"></div>
 
         {/* Content (Must be positioned relative/z-20 to sit above overlay) */}
         <div className="relative z-20">
           <Container>
-            <Pretitle text="Our Portfolio" center />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 uppercase tracking-wider">
               Infrastructure Excellence
             </h1>

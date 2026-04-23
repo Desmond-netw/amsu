@@ -10,7 +10,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <div className="relative h-[42vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-slate-900">
         <Image
-          src="/assets/aboutUs/Hero.webp"
+          src="/assets/aboutUs/heroTemp.jpg"
           alt="About AMSU"
           fill
           className="object-cover brightness-75"
@@ -64,7 +64,7 @@ const AboutPage = () => {
       <div className="bg-slate-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <Pretitle text="Our Vision" />
-          <h2 className="text-3xl font-semibold text-slate-900 mt-3 mb-6">
+          <h2 className="text-[1.2rem] sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
             To be the leading provider of sewerage services in Ghana, renowned
             for our commitment to safety, sustainability, and customer
             satisfaction.
@@ -81,7 +81,7 @@ const AboutPage = () => {
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <Pretitle text="Our Mission" />
-          <h2 className="text-3xl font-semibold text-slate-900 mt-3 mb-6">
+          <h2 className="text-[1.2rem] sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
             To enhance public health and quality of life in Ghana by providing
             reliable, efficient, and environmentally responsible sewerage
             services, while promoting sustainable development and community
@@ -134,7 +134,7 @@ const AboutPage = () => {
       </div>
 
       {/* Quality Commitment */}
-      <div className="py-20 bg-slate-500 text-white">
+      <div className="py-20 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Pretitle text="Our Commitment" />
           <h2 className="text-3xl font-semibold mt-3 mb-8">

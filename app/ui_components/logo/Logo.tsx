@@ -26,7 +26,7 @@ const Logo = ({ width, height }: LogoProps) => {
           AMSU
         </span>
         <span className="text-[10px] text-gray-500 uppercase tracking-widest">
-          Accra Metro Sewerage
+          Accra Metro Sewerage Unit
         </span>
       </div>
     </Link>

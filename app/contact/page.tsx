@@ -9,7 +9,7 @@ const contactPage = () => {
         className="relative h-[300px] bg-cover bg-center bg-no-repeat mb-12"
         style={{ backgroundImage: "url('/assets/banner/banner2.webp')" }}
       >
-        <div className="absolute inset-0 bg-brand_1-900 bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-slate-900 bg-opacity-50"></div>
       </div>
 
       {/* Content Section */}

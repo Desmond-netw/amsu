@@ -25,8 +25,8 @@ export const Navbar = () => {
       {/* Topbar stays at the absolute top */}
       <Topbar />
 
-      {/* Main Navbar: Below the topbar */}
-      <header className="bg-gray-100 border-b-2 border-brand_1-300 py-3 sticky top-0 z-50 shadow-sm transition-all">
+      {/* Main Navbar: Below the topbar with sticky positioning */}
+      <header className="bg-gray-100 border-b-2 border-brand_1-300 py-3 sticky  top-0 z-50 shadow-sm transition-all">
         <div className="container mx-auto px-4">
           <div className="w-full flex items-center justify-between">
             {/* Logo Section */}

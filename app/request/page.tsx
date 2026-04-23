@@ -8,13 +8,17 @@ const RequestPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       {/* --- Section 1: Minimal Hero --- */}
-      <section className="bg-brand_1-900 py-16 text-white">
+      <section
+        className="relative mx-h-[300px] bg-cover bg-center bg-no-repeat mb-12"
+        style={{ backgroundImage: "url('/assets/request/tool.webp')" }}
+      >
+        <div className="absolute inset-0 bg-slate-900 bg-opacity-50"></div>
         <Container>
-          <div className="max-w-3xl">
+          <div className="max-w-3xl p-4 md:p-8 lg:p-12 text-white relative z-10 bg-[#000000] opacity-60 ">
             <h1 className="text-4xl font-bold uppercase tracking-tight">
               Request Service
             </h1>
-            <p className="mt-4 text-slate-300 text-lg">
+            <p className="mt-4 text-primary text-lg">
               Submit your technical requirements below. Our engineering team
               will review your application and contact you within 24-48 hours.
             </p>

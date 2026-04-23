@@ -128,6 +128,11 @@ export const Footer = () => {
                 src="/assets/logo/logo.png"
                 fallback="AMSU"
               />
+              <Avatar
+                size={{ initial: "5", md: "7", lg: "8", xl: "9" }}
+                src="/assets/logo/coatOfArms.png"
+                fallback="AMSU"
+              />
             </Flex>
           </div>
           {/* Footer list 3 end */}

@@ -16,10 +16,10 @@ const AboutPage = () => {
           className="object-cover brightness-75"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/70"></div>
 
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto text-white">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+          <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg">
             About AMSU
           </h1>
           <p className="text-xl text-white/90">

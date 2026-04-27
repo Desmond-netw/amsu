@@ -101,7 +101,7 @@ const ContactMapSection = () => {
                       <p>
                         123 Wastewater Street,
                         <br />
-                        Accra{" "}
+                        Accra
                       </p>
                     </div>
                   </div>
@@ -137,7 +137,7 @@ const ContactMapSection = () => {
             </div>
           </Flex>
         </Box>
-        {/*-- Temporary Contact Form  */}
+
         <Box maxWidth="600px  rounded-sm px-6">
           <div className=" w-full h-full border border-brand_1-100 box-border shadow-md p-6 rounded-md">
             <Heading size={{ initial: "2", md: "4" }} className="mb-4">
@@ -147,6 +147,7 @@ const ContactMapSection = () => {
               Have any questions or inquiries? Fill out the form below and
               we&apos;ll get back to you as soon as possible.
             </Text>
+            {/* Contact Form Fields */}
             <form className="flex flex-col gap-4 py-4">
               <Flex direction="column" gap="2">
                 {/* --Name -- */}

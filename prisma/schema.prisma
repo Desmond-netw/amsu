@@ -12,85 +12,116 @@ datasource db {
 }
 
 model Admin {
-  id String @id @default(uuid())
+  id       String @id @default(uuid())
   username String @unique
 }
 
 model User {
-  id String @id @default(uuid())
-  username String @unique
-  firstName String
-  lastName String
-  email String @unique
-  phone String?
-  address String?
-  img String?
-  sex UserSex?
-  createdAt DateTime @default(now())
-  // relations
-  requestId String?
-  request Request? @relation(fields: [requestId], references: [id])
-
+  id                String              @id @default(uuid())
+  username          String              @unique
+  firstName         String
+  lastName          String
+  email             String              @unique
+  phone             String?
+  address           String?
+  img               String?
+  sex               UserSex?
+  role              ROLE                @default(user)
+  createdAt         DateTime            @default(now())
+  
+  // Relations
+  requestId         String?
+  request           Request?            @relation(fields: [requestId], references: [id])
+  
+  // Back-references for relations
+  projectsCreated   ProjectsReg[]       @relation("UserProjects")
+  portfolioItems    ProjectsPortfolio[] @relation("UserPortfolio")
+  
+  @@map("users")
 }
 
 model Request {
-  id String @id @default(uuid())
-  fullName String
-  reqEmail String?
-  reqPhone String
+  id                  String         @id @default(uuid())
+  fullName            String
+  reqEmail            String?
+  reqPhone            String
   reqTypeOfFacilities String
-  typeOfService String // e.g., "Maintenance", "Repair", "Installation"
-  reqDescription String?
-  reqFullAddress String?
-  reqDate DateTime?
-  reqStatus String?
-  createdAt DateTime @default(now())
-  // relations
-  users User[]
-  customer Customer[]
+  typeOfService       String 
+  reqDescription      String?
+  reqFullAddress      String?
+  reqDate             DateTime?
+  reqStatus           RequestStatus? @default(UNDER_REVIEW)
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  
+  // Relations
+  users               User[]
+  customers           Customer[]
 }
 
 model ProjectsReg {
-  id String @id @default(uuid())
-  sn String @unique // Serial Number
-  description String?
+  id              String   @id @default(uuid())
+  sn              String   @unique 
+  description     String?
   projectlocation String?
-  clientName String?
-  createdAt DateTime @default(now())
+  clientName      String?
+  createdAt       DateTime @default(now())
+  
+  // Fixed the duplicate name conflict here
+  creatorId       String?
+  creator         User?    @relation("UserProjects", fields: [creatorId], references: [id])
 }
 
 model ProjectsPortfolio {
-  id String @id @default(uuid())
-  title String
+  id          String   @id @default(uuid())
+  title       String
   description String?
-  img String?
-  createdAt DateTime @default(now())
+  img         String?
+  createdAt   DateTime @default(now())
+  
+  // Added back-reference to User
+  userId      String?
+  user        User?    @relation("UserPortfolio", fields: [userId], references: [id])
 }
 
 model Contacts {
-  id String @id @default(uuid())
-  fullName String
-  phone String
-  email String?
-  Subject String
-  message String
+  id        String   @id @default(uuid())
+  fullName  String
+  phone     String
+  email     String?
+  Subject   String
+  message   String
   createdAt DateTime @default(now())
 }
 
 model Customer {
-  id String @id @default(uuid())
-  name String
-  email String @unique
-  phone String
-  address String?
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  phone     String
+  address   String?
   createdAt DateTime @default(now())
-  // relations
-  requestId String? @unique
-  request Request? @relation(fields: [requestId], references: [id])
+  
+  // Relations
+  requestId String?  @unique
+  request   Request? @relation(fields: [requestId], references: [id])
 }
 
 
 enum UserSex {
   MALE
   FEMALE
+}
+
+
+enum ROLE {
+  admin
+  user
+}
+
+enum RequestStatus {
+  UNDER_REVIEW
+  IN_PROGRESS
+  COMPLETED
+  REJECTED
 }

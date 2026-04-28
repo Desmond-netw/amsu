@@ -27,7 +27,7 @@ const FormGroup = ({
         id={name}
         name={name}
         placeholder={placeholder}
-        className="border border-slate-200 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all bg-slate-50 focus:bg-white"
+        className="border-b border-black w-full outline-none bg-transparent text-sm py-1"
       />
     </div>
   );

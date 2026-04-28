@@ -41,12 +41,14 @@ export default function RootLayout({
       >
         <ClerkProvider>
           <Theme>
-            <div className="flex flex-col min-h-screen gap-8">
+            <div className="flex flex-col min-h-screen">
+              {/* Navbar */}
               <Navbar />
-              <main className="flex-grow pb-8 mb-4">
-                <Container>{children}</Container>{" "}
-                {/* Wrap children with Container for consistent layout */}
+              {/* Main Content */}
+              <main className="flex-grow pt-8 pb-8">
+                <Container>{children}</Container>
               </main>
+              {/* Footer */}
               <Footer />
             </div>
           </Theme>

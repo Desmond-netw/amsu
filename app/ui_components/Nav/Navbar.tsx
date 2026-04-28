@@ -13,6 +13,7 @@ const links = [
   { name: "services", path: "/services" },
   { name: "pump stations", path: "/pumpStations" },
   { name: "Projects", path: "/projects" },
+  { name: "application form", path: "/applicationForm" },
   { name: "contact", path: "/contact" },
   { name: "request", path: "/request" },
 ];
@@ -21,31 +22,30 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className=" w-full">
-      {/* Topbar stays at the absolute top */}
-      <Topbar />
+    <div className="w-full">
+      {/* Topbar (normal flow) */}
+      <div className="h-10">
+        <Topbar />
+      </div>
 
-      {/* Main Navbar: Below the topbar with sticky positioning */}
-      <header className="bg-gray-100 border-b-2 border-brand_1-300 py-3 sticky  top-0 z-50 shadow-sm transition-all">
+      {/* Sticky Navbar */}
+      <header className="sticky top-10 z-50 bg-gray-100 border-b-2 border-brand_1-300 py-3 shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="w-full flex items-center justify-between">
-            {/* Logo Section */}
+          <div className="flex items-center justify-between">
             <Logo width={70} height={70} />
 
-            {/* Desktop Navigation */}
             <nav className="hidden xl:flex items-center gap-10">
               <ul className="flex items-center gap-8">
                 {links.map((link, index) => {
                   const isActive = pathname === link.path;
+
                   return (
                     <li key={index}>
                       <Link
                         href={link.path}
-                        className={`
-                          relative text-sm font-bold uppercase tracking-wider transition-all duration-300
-                          hover:text-brand_1-600
+                        className={`relative text-sm font-bold uppercase tracking-wider transition-all
                           ${isActive ? "text-brand_1-600" : "text-slate-700"}
-                          /* Underline animation */
+                          hover:text-brand_1-600
                           after:content-[''] after:absolute after:-bottom-1 after:left-0 
                           after:w-0 after:h-[2px] after:bg-brand_1-600 after:transition-all
                           hover:after:w-full ${isActive ? "after:w-full" : ""}
@@ -58,18 +58,16 @@ export const Navbar = () => {
                 })}
               </ul>
 
-              {/* Professional CTA Button */}
-              <button className="group flex items-center bg-slate-900 rounded-full overflow-hidden transition-all hover:bg-green-700">
+              <button className="group flex items-center bg-slate-900 rounded-full overflow-hidden hover:bg-green-700 transition-all">
                 <span className="pl-6 pr-4 text-white font-bold text-xs uppercase tracking-widest">
                   get a quote
                 </span>
                 <div className="m-1 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20">
-                  <RiArrowRightUpLine className="text-white text-xl group-hover:rotate-45 transition-all duration-300" />
+                  <RiArrowRightUpLine className="text-white text-xl group-hover:rotate-45 transition-all" />
                 </div>
               </button>
             </nav>
 
-            {/* Mobile Menu Trigger */}
             <div className="xl:hidden">
               <MobileNav />
             </div>

@@ -8,7 +8,7 @@ import Pretitle from "../ui_components/pretitle/Pretitile";
 const servicesData = [
   {
     title: "Sewerage Collection and Treatment",
-    bgImage: "/assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/treatment/treatment-0.webp",
     link: "/services/treatment",
   },
   {
@@ -18,7 +18,7 @@ const servicesData = [
   },
   {
     title: "Sewer Network Maintenance and Repair",
-    bgImage: "/assets/services/maintenance/maintenance-0.png",
+    bgImage: "/assets/services/maintenance/maintenance-0.jpeg",
     link: "/services/repair",
   },
   {

@@ -9,6 +9,18 @@ import {
   FiClock,
   FiCheckCircle,
 } from "react-icons/fi";
+import { ReactNode } from "react";
+// type declarations
+type ContactItemProps = {
+  icon: ReactNode;
+  label: string;
+  val: string;
+};
+
+type FAQItemProps = {
+  q: string;
+  a: string;
+};
 
 function CustomerServicePage() {
   return (
@@ -167,10 +179,11 @@ function CustomerServicePage() {
 
 // --- Helper Components ---
 
-function ContactItem({ icon, label, val }: any) {
+function ContactItem({ icon, label, val }: ContactItemProps) {
   return (
     <div className="flex items-start gap-3">
       <div className="text-blue-600 mt-1 text-lg">{icon}</div>
+
       <div>
         <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter">
           {label}
@@ -181,7 +194,7 @@ function ContactItem({ icon, label, val }: any) {
   );
 }
 
-function FAQItem({ q, a }: any) {
+function FAQItem({ q, a }: FAQItemProps) {
   return (
     <div className="border-l-4 border-blue-600 bg-white p-4 shadow-sm rounded-r-lg">
       <p className="font-bold text-slate-900 mb-1">{q}</p>

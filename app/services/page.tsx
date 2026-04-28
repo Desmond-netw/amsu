@@ -13,7 +13,7 @@ const servicesData = [
   },
   {
     title: "Wastewater Management",
-    bgImage: "/assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/wastewater/wastewater-0.webp",
     link: "/services/wastewater",
   },
   {
@@ -23,7 +23,7 @@ const servicesData = [
   },
   {
     title: "Industrial Wastewater Treatment",
-    bgImage: "/assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/industrialWaste/wasteThumb.webp",
     link: "/services/industrial-treatment",
   },
   {
@@ -33,7 +33,7 @@ const servicesData = [
   },
   {
     title: "Customer Service and Support",
-    bgImage: "/assets/services/service-thumb_1.webp",
+    bgImage: "/assets/services/customerService/customerThumb.webp",
     link: "/services/customer-support",
   },
 ];

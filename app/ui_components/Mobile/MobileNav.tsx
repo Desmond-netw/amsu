@@ -21,6 +21,7 @@ const links = [
   { name: "services", path: "/services" },
   { name: "pump stations", path: "/pumpStations" },
   { name: "Projects", path: "/projects" },
+  { name: "application form", path: "/applicationForm" },
   { name: "contact", path: "/contact" },
   { name: "request", path: "/request" },
 ];

@@ -2,7 +2,6 @@
 
 import { Box, Card, Strong, Text } from "@radix-ui/themes";
 import Image from "next/image";
-import Button from "../button/button";
 import RouteBtn from "../button/route-btn";
 
 interface ProjectCardProps {

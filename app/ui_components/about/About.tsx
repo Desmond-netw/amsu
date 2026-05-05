@@ -1,6 +1,5 @@
 // import Image from "next/image";
 import Pretitle from "../pretitle/Pretitile";
-import Button from "../button/button";
 import AboutSlider from "./AboutSlider";
 import RouteBtn from "../button/route-btn";
 

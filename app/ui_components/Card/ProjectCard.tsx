@@ -2,18 +2,22 @@
 
 import { Box, Card, Strong, Text } from "@radix-ui/themes";
 import Image from "next/image";
-import Button from "../button/button";
+import RouteBtn from "../button/route-btn";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  href?: string;
+  btn_text?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   imageUrl,
+  href,
+  btn_text,
 }) => {
   return (
     <Box className="w-full">
@@ -59,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Button */}
         <div className="px-4 pb-4">
-          <Button text="Read More" linkstring="/caseStudies" />
+          <RouteBtn text={btn_text || "Learn More"} href={href || "#"} />
         </div>
       </Card>
     </Box>

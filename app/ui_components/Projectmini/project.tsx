@@ -7,6 +7,8 @@ const projectData = [
   {
     id: 1,
     title: "Waste Stabilization Pond",
+    btn_text: "Learn More",
+    href: "/services/wastewater",
     description:
       "Waste Stabilization Ponds (WSP) have proven to be effective for treating wastewater, and the construction of low energy-consuming ecosystems that use natural processes...",
     imageUrl: "/assets/projectmini/thumb2.webp",
@@ -14,6 +16,8 @@ const projectData = [
   {
     id: 2,
     title: "Laboratory and Testing Services",
+    btn_text: "Learn More",
+    href: "/services/treatment",
     description:
       "Physicochemical parameters such as pH, temperature, BOD, COD, TSS, DO, nutrients, and more are monitored to assess wastewater quality...",
     imageUrl: "/assets/projectmini/thumb1.jpg",
@@ -21,6 +25,8 @@ const projectData = [
   {
     id: 3,
     title: "Sewerage machinery and vehicles",
+    btn_text: "Learn More",
+    href: "/services/repair",
     description:
       "Our range of sewerage vehicles and machines are essential for the efficient operation and maintenance of wastewater collection systems...",
     imageUrl: "/assets/projectmini/thumb3.jpg",
@@ -47,6 +53,8 @@ const ProjectMini = () => {
               title={data.title}
               description={data.description}
               imageUrl={data.imageUrl}
+              btn_text={data.btn_text}
+              href={data.href}
             />
           ))}
         </div>

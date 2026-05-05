@@ -1,12 +1,11 @@
 "use client";
-// usage : <Button text="Learn More" linkstring="/services/treatment" />
 
 import Link from "next/link";
-import { RiArrowRightFill } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 
 interface ButtonProps {
   text: string;
-  linkstring: string; // route link
+  linkstring: string;
 }
 
 const Button = ({ text, linkstring }: ButtonProps) => {
@@ -14,46 +13,50 @@ const Button = ({ text, linkstring }: ButtonProps) => {
     <Link
       href={linkstring}
       className="
-        w-full sm:w-52 
-        h-10 sm:h-12 
-        py-2 sm:py-3 px-3 
+        w-full sm:w-64 
+        h-14 
+        px-6 
         flex items-center justify-between group 
-        bg-blue-600 hover:bg-blue-700 active:bg-blue-800
-        border-2 border-blue-800
-        rounded-lg transition-all duration-300 shadow-md
+        /* Base: Darkest shade for authority | Hover: Main brand color */
+        bg-brand_1-900 hover:bg-brand_1-500 active:bg-brand_1-600
+        text-white
+        rounded-xl transition-all duration-500 
+        shadow-[0_10px_20px_-10px_rgba(14,141,60,0.3)]
+        hover:shadow-[0_15px_25px_-5px_rgba(14,141,60,0.4)]
+        border border-brand_1-800/30
       "
     >
       {/* Text */}
-      <div
+      <span
         className="
-          flex-1 text-center 
-          tracking-[0.5px] sm:tracking-[1.2px] 
-          font-primary font-semibold 
-          text-white uppercase
-          text-xs sm:text-sm md:text-base
+          flex-1 text-left 
+          tracking-wide
+          font-semibold 
+          text-sm md:text-base
         "
       >
         {text}
-      </div>
+      </span>
 
-      {/* Arrow Box */}
+      {/* Icon Container */}
       <div
         className="
-          w-8 h-8 sm:w-6 sm:h-6
-          bg-white 
+          w-10 h-10
+          /* Light tint of green for the box */
+          bg-brand_1-400/20
           flex items-center justify-center 
-          rounded-md
-          transition-all duration-300
-          group-hover:bg-blue-50
-          group-active:bg-blue-100
+          rounded-lg
+          transition-all duration-500
+          group-hover:bg-white
+          group-hover:scale-110
         "
       >
-        <RiArrowRightFill
+        <RiArrowRightLine
           className="
-            text-blue-700 
-            text-lg sm:text-sm md:text-base 
-            transition-all duration-300 
-            group-hover:rotate-45
+            text-brand_1-100 
+            text-xl
+            transition-colors duration-500 
+            group-hover:text-brand_1-700
           "
         />
       </div>

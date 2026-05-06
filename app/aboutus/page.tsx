@@ -30,12 +30,14 @@ const AboutPage = () => {
 
       {/* About Us Story */}
       <div className="max-w-4xl mx-auto px-6 py-20">
-        <Pretitle text="Our Story" />
-        <h2 className="text-4xl font-bold text-slate-900 mt-3 mb-10">
+        <div className="justify-center md:justify-start flex">
+          <Pretitle text="Our Story" />
+        </div>
+        <h2 className="text-4xl text-center md:text-left font-bold text-slate-900 mt-3 mb-10">
           About AMSU
         </h2>
 
-        <div className="prose prose-lg text-slate-700 space-y-6">
+        <div className="prose prose-lg text-center md:text-left text-slate-700 space-y-6">
           <p>
             Accra Metro Sewerage Unit (AMSU) is a premier provider of sewerage
             and wastewater management services in Ghana, renowned for our
@@ -63,13 +65,16 @@ const AboutPage = () => {
       {/* Vision */}
       <div className="bg-slate-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Pretitle text="Our Vision" />
-          <h2 className="text-[1.2rem] sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
+          <div className="justify-center md:justify-start flex">
+            <Pretitle text="Our Vision" />
+          </div>
+
+          <h2 className="text-[1.2rem] text-center md:text-left sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
             To be the leading provider of sewerage services in Ghana, renowned
             for our commitment to safety, sustainability, and customer
             satisfaction.
           </h2>
-          <p className="text-lg text-slate-700 max-w-3xl">
+          <p className="text-lg text-center md:text-left text-slate-700 max-w-3xl">
             We aim to set the standard for sustainable wastewater management in
             Ghana and contribute to a clean, green, and healthy future for all
             residents.
@@ -80,14 +85,17 @@ const AboutPage = () => {
       {/* Mission */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Pretitle text="Our Mission" />
-          <h2 className="text-[1.2rem] sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
+          <div className="justify-center md:justify-start flex">
+            <Pretitle text="Our Mission" />
+          </div>
+
+          <h2 className="text-[1.2rem] text-center md:text-left sm:text-base md:text-2xl xl:text-3xl font-semibold text-slate-900 mt-3 mb-6">
             To enhance public health and quality of life in Ghana by providing
             reliable, efficient, and environmentally responsible sewerage
             services, while promoting sustainable development and community
             engagement.
           </h2>
-          <p className="text-lg text-slate-700 max-w-3xl">
+          <p className="text-lg text-center md:text-left text-slate-700 max-w-3xl">
             We strive to provide high-quality services in a proactive,
             professional, and cost-effective manner while supporting the
             socio-economic development of Accra.
@@ -98,8 +106,11 @@ const AboutPage = () => {
       {/* Core Values */}
       <div className="bg-slate-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <Pretitle text="Our Values" />
-          <h2 className="text-4xl font-bold text-slate-900 mt-3 mb-12 text-center">
+          <div className="justify-center md:justify-start flex">
+            <Pretitle text="Our Values" />
+          </div>
+
+          <h2 className="text-4xltext-center md:text-left font-bold text-slate-900 mt-3 mb-12 text-center">
             What Guides Us
           </h2>
 
@@ -123,10 +134,12 @@ const AboutPage = () => {
               },
             ].map((value, i) => (
               <div key={i}>
-                <h3 className="text-2xl font-semibold text-slate-900 mb-4">
+                <h3 className="text-2xl text-center md:text-left font-semibold text-slate-900 mb-4">
                   {value.title}
                 </h3>
-                <p className="text-slate-700">{value.desc}</p>
+                <p className="text-slate-700 text-center md:text-left">
+                  {value.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -136,7 +149,11 @@ const AboutPage = () => {
       {/* Quality Commitment */}
       <div className="py-20 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <Pretitle text="Our Commitment" />
+          <h2 className="text-4xl text-gray-200 font-bold mb-6">
+            Our Commitment
+          </h2>
+          {/* horizontal underline */}
+          <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
           <h2 className="text-3xl font-semibold mt-3 mb-8">
             To meet and exceed the expectations of the residents of Accra
             through professional and reliable service.

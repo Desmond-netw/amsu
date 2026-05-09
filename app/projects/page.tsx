@@ -101,7 +101,7 @@ const ProjectsPage = () => {
         {/* Content (Must be positioned relative/z-20 to sit above overlay) */}
         <div className="relative z-20">
           <Container>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 uppercase tracking-wider">
+            <h1 className="text-4xl md:text-5xl font-bold mt-4 uppercase tracking-wider">
               Infrastructure Excellence
             </h1>
             <p className="mt-5 text-slate-200 max-w-2xl mx-auto text-lg leading-relaxed font-light">
@@ -138,9 +138,9 @@ const ProjectsPage = () => {
                   <p className="text-slate-600 text-sm leading-relaxed">
                     {card.desc}
                   </p>
-                  <button className="mt-4 text-brand_1-600 font-semibold text-sm hover:underline">
+                  {/* <button className="mt-4 text-brand_1-600 font-semibold text-sm hover:underline">
                     View Case Study →
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

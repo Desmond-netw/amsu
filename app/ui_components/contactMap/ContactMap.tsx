@@ -109,7 +109,8 @@ const ContactMapSection = () => {
               </Flex>
             </Box>
             {/*=============== Map Image ============== */}
-            <div className="mt-6 relative">
+            <div className="mt-6 flex flex-col gap-4 md:block md:relative">
+              {/* The Image */}
               <Image
                 src="/assets/contact/accraMap.png"
                 alt="Contact Map"
@@ -117,20 +118,31 @@ const ContactMapSection = () => {
                 height={400}
                 className="w-full h-auto object-cover rounded-md shadow-md"
               />
-              {/* Overlay Cards */}
-              <div className="absolute top-4 left-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg max-w-xs">
+
+              {/* 
+                Overlay Cards: 
+                - On mobile: They sit below the image in a flex column (gap-4)
+                - On md screens+: They move back into absolute positions
+              */}
+
+              {/* Card 1 */}
+              <div className="md:absolute md:top-4 md:left-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg md:max-w-[200px] lg:max-w-xs ">
                 <p className="text-sm text-gray-800">
                   Ring Road West adjacent the Ghana Water Limited District
                   Office and VIP Bus terminal
                 </p>
               </div>
-              <div className="absolute top-4 right-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg max-w-xs">
+
+              {/* Card 2 */}
+              <div className="md:absolute md:top-4 md:right-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg md:max-w-[180px] lg:max-w-xs ">
                 <p className="text-sm text-gray-800">
-                  Kwame Nkrumah Circle- Accra
+                  Kwame Nkrumah Circle - Accra
                 </p>
               </div>
-              <div className="absolute bottom-4 left-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg max-w-xs">
-                <p className="text-sm text-gray-800">
+
+              {/* Card 3 */}
+              <div className="md:absolute md:bottom-4 md:left-4 bg-white bg-opacity-90 p-3 rounded-md shadow-lg md:max-w-[200px] lg:max-w-xs ">
+                <p className="text-sm text-gray-800 font-bold">
                   GPS Address: GA-174-4027
                 </p>
               </div>
@@ -198,7 +210,7 @@ const ContactMapSection = () => {
                   </Text>
                   <TextArea
                     size={{ initial: "1", md: "2", lg: "3" }}
-                    placeholder="You Message"
+                    placeholder="Your Message"
                   />
                 </Box>
               </Flex>

@@ -6,9 +6,9 @@ import StationsAccordion from "../ui_components/stationsSwiper/stationAccordion"
 const StationsPage = () => {
   return (
     <main>
-      {/* 1. Hero Section - 70vh with Fixed Background */}
+      {/* 1. Hero Section - 50vh with Fixed Background */}
       <section
-        className="relative h-[70vh] w-full bg-cover bg-center bg-no-repeat bg-fixed flex items-center justify-center"
+        className="relative h-[50vh] w-full bg-contain bg-center bg-no-repeat bg-fixed flex items-center justify-center"
         style={{
           backgroundImage: "url('/assets/pumpStations/station_0.jpg')",
         }}

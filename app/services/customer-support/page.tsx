@@ -36,19 +36,19 @@ function CustomerServicePage() {
               className="object-cover"
             />
             {/* Overlay Gradient for text readability on mobile */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-brand_1-900/40 to-transparent" />
           </div>
 
-          <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-blue-900 text-white">
+          <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-brand_1-900 text-white">
             <h1 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight mb-4">
               Customer Service & Support
             </h1>
-            <p className="text-blue-100 text-lg leading-relaxed">
+            <p className="text-brand_1-100 text-lg leading-relaxed">
               Our dedicated team is here to help you navigate sewer connections,
               manage service requests, and resolve inquiries with efficiency and
               professionalism.
             </p>
-            <div className="mt-6 flex items-center gap-2 text-blue-300 font-semibold">
+            <div className="mt-6 flex items-center gap-2 text-brand_1-300 font-semibold">
               <FiCheckCircle />
               <span>Accra Metropolitan Sewerage Unit</span>
             </div>
@@ -60,8 +60,8 @@ function CustomerServicePage() {
           <div className="lg:col-span-2 p-8 space-y-10 border-r border-slate-100">
             {/* CONTACT INFO GRID */}
             <section>
-              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
-                <span className="w-8 h-[2px] bg-blue-600"></span> 1. Contact
+              <h2 className="text-brand_1-900 font-bold uppercase tracking-widest text-sm mb-6 flex items-center gap-2">
+                <span className="w-8 h-[2px] bg-brand_1-600"></span> 1. Contact
                 Information
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -90,7 +90,7 @@ function CustomerServicePage() {
 
             {/* SERVICES PROVIDED */}
             <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">
+              <h2 className="text-brand_1-900 font-bold uppercase tracking-widest text-sm mb-4">
                 2. Services Provided
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-700">
@@ -102,7 +102,7 @@ function CustomerServicePage() {
                   "Technical assistance",
                 ].map((s, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <FiCheckCircle className="text-blue-600" />
+                    <FiCheckCircle className="text-brand_1-600" />
                     <span>{s}</span>
                   </div>
                 ))}
@@ -111,7 +111,7 @@ function CustomerServicePage() {
 
             {/* FAQ SECTION */}
             <section>
-              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">
+              <h2 className="text-brand_1-900 font-bold uppercase tracking-widest text-sm mb-6">
                 3. Frequently Asked Questions
               </h2>
               <div className="space-y-4">
@@ -131,7 +131,7 @@ function CustomerServicePage() {
           <div className="bg-slate-50/50 p-8">
             {/* WORKING HOURS BOX */}
             <div className="mb-10 bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-              <h3 className="text-blue-900 font-bold flex items-center gap-2 mb-4">
+              <h3 className="text-brand_1-900 font-bold flex items-center gap-2 mb-4">
                 <FiClock /> Working Hours
               </h3>
               <div className="text-sm space-y-2 text-slate-600">
@@ -148,28 +148,28 @@ function CustomerServicePage() {
             </div>
 
             {/* COMPLAINT FORM */}
-            <div className="bg-white p-6 rounded-xl shadow-md border border-blue-100">
-              <h3 className="text-blue-900 font-bold mb-4">Submit a Request</h3>
+            {/* <div className="bg-white p-6 rounded-xl shadow-md border border-brand_1-100">
+              <h3 className="text-brand_1-900 font-bold mb-4">Submit a Request</h3>
               <form className="space-y-4">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 outline-none p-2 text-sm transition-all"
+                  className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-brand_1-600 outline-none p-2 text-sm transition-all"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 outline-none p-2 text-sm transition-all"
+                  className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-brand_1-600 outline-none p-2 text-sm transition-all"
                 />
                 <textarea
                   placeholder="How can we help you?"
-                  className="w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-600 rounded-lg outline-none p-3 text-sm min-h-[150px] transition-all"
+                  className="w-full bg-slate-50 border-2 border-slate-200 focus:border-brand_1-600 rounded-lg outline-none p-3 text-sm min-h-[150px] transition-all"
                 ></textarea>
-                <button className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-all shadow-lg active:scale-95">
+                <button className="w-full bg-brand_1-600 text-white font-bold py-3 rounded-lg hover:bg-brand_1-700 transition-all shadow-lg active:scale-95">
                   Send Message
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@ function CustomerServicePage() {
 function ContactItem({ icon, label, val }: ContactItemProps) {
   return (
     <div className="flex items-start gap-3">
-      <div className="text-blue-600 mt-1 text-lg">{icon}</div>
+      <div className="text-brand_1-600 mt-1 text-lg">{icon}</div>
 
       <div>
         <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter">
@@ -196,7 +196,7 @@ function ContactItem({ icon, label, val }: ContactItemProps) {
 
 function FAQItem({ q, a }: FAQItemProps) {
   return (
-    <div className="border-l-4 border-blue-600 bg-white p-4 shadow-sm rounded-r-lg">
+    <div className="border-l-4 border-brand_1-600 bg-white p-4 shadow-sm rounded-r-lg">
       <p className="font-bold text-slate-900 mb-1">{q}</p>
       <p className="text-sm text-slate-600">{a}</p>
     </div>

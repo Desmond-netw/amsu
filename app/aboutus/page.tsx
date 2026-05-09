@@ -16,7 +16,7 @@ const AboutPage = () => {
           className="object-cover brightness-75"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/70 opacity-5"></div>
 
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto text-white">
           <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg">
@@ -34,7 +34,7 @@ const AboutPage = () => {
           <Pretitle text="Our Story" />
         </div>
         <h2 className="text-4xl text-center md:text-left font-bold text-slate-900 mt-3 mb-10">
-          About AMSU
+          Who We Are and What We Stand For
         </h2>
 
         <div className="prose prose-lg text-center md:text-left text-slate-700 space-y-6">

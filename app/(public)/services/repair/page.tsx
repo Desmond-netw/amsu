@@ -1,8 +1,8 @@
-import Pretitle from "@/app/ui_components/pretitle/Pretitile";
+import Pretitle from "@/app/(public)/ui_components/pretitle/Pretitile";
 import ServiceDetail from "../serviceDetail";
 // import Container from "@/app/ui_components/Container";
 import Image from "next/image";
-import Button from "@/app/ui_components/button/button";
+import Button from "@/app/(public)/ui_components/button/button";
 
 export default function ConstructionPage() {
   return (

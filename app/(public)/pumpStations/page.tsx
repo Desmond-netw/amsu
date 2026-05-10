@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "@/app/ui_components/Container";
+import Container from "@/app/(public)/ui_components/Container";
 import StationsSwiper from "../ui_components/stationsSwiper/stations-swiper";
 import StationsAccordion from "../ui_components/stationsSwiper/stationAccordion";
 

@@ -1,7 +1,7 @@
-import Pretitle from "@/app/ui_components/pretitle/Pretitile";
+import Pretitle from "@/app/(public)/ui_components/pretitle/Pretitile";
 import ServiceDetail from "../serviceDetail";
 import Image from "next/image";
-import ExpandableText from "@/app/ui_components/ExpandableText/ExpandableText";
+import ExpandableText from "@/app/(public)/ui_components/ExpandableText/ExpandableText";
 
 export default function WastewaterPage() {
   return (

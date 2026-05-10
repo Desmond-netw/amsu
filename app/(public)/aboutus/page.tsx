@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import Pretitle from "@/app/ui_components/pretitle/Pretitile";
-import Button from "@/app/ui_components/button/button";
+import Pretitle from "@/app/(public)/ui_components/pretitle/Pretitile";
+import Button from "@/app/(public)/ui_components/button/button";
 
 const AboutPage = () => {
   return (

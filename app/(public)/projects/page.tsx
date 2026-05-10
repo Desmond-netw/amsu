@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 // import Pretitle from "@/app/ui_components/pretitle/Pretitile";
-import Container from "@/app/ui_components/Container";
+import Container from "@/app/(public)/ui_components/Container";
 import { ScrollArea } from "@radix-ui/themes";
 
 const ProjectsPage = () => {

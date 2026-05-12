@@ -1,9 +1,10 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-// import Sidebar from "./Sidebar";
 import Menu from "./dashboard_components/menu";
 import Link from "next/link";
 import Image from "next/image";
+import DashNavbar from "./dashboard_components/dashNavbar";
+import Announcements from "./dashboard_components/announcements"; // New Import
 
 export default async function DashboardLayout({
   children,
@@ -12,31 +13,49 @@ export default async function DashboardLayout({
 }) {
   const { userId } = await auth();
 
-  // Server-side protection
   if (!userId) {
     redirect("/sign-in");
   }
 
   return (
-    <div className="h-screen flex">
-      {/* left  */}
-      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%]">
+    <div className="h-screen flex overflow-hidden bg-white">
+      {/* SIDEBAR (L) */}
+      <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] border-r border-slate-100 flex flex-col">
         <Link
-          href="/dashboard"
-          className="flex items-center justify-center lg:justify-start gap-2 "
+          href="/admin"
+          className="flex items-center justify-center lg:justify-start gap-2 px-6 py-8"
         >
           <Image
             src="/assets/logo/logo.png"
             alt="Logo"
-            width={30}
-            height={30}
+            width={32}
+            height={32}
           />
-          <span className="hidden lg:inline text-md tracking-tight">AMSU</span>
+          <span className="hidden lg:inline text-xl font-bold tracking-tighter text-brand_1-900">
+            AMSU
+          </span>
         </Link>
-        <Menu />
+        <div className="flex-1 overflow-y-auto px-2">
+          <Menu />
+        </div>
       </div>
-      {/* right    */}
-      <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%]">{children}</div>
+
+      {/* MAIN VIEWPORT */}
+      <div className="flex-1 flex flex-col bg-[#F7F8FA] overflow-hidden">
+        <DashNavbar />
+
+        <div className="flex-1 overflow-y-auto p-4">
+          <div className="flex flex-col lg:flex-row gap-6 h-full">
+            {/* MAIN CONTENT */}
+            <div className="w-full lg:w-[70%] xl:w-[75%]">{children}</div>
+
+            {/* ANNOUNCEMENTS COMPONENT (R) */}
+            <div className="w-full lg:w-[30%] xl:w-[25%]">
+              <Announcements />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
 import StatCard from "@/app/(dashboard)/dashboard_components/StatCard";
 import { FiActivity, FiUsers, FiFolder } from "react-icons/fi";
 
@@ -19,7 +18,6 @@ export default function AdminDashboard() {
         </div>
 
         {/* User Account */}
-        <UserButton fallback="/" />
       </div>
 
       {/* Stats Grid */}

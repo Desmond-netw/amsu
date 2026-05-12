@@ -20,6 +20,9 @@ export default async function DashboardLayout({
     redirect("/sign-in");
   }
 
+  // fallback user role staff
+  const role = (user?.publicMetadata?.role as string) || "staff";
+
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       {/* SIDEBAR (L) */}
@@ -39,7 +42,7 @@ export default async function DashboardLayout({
           </span>
         </Link>
         <div className="flex-1 overflow-y-auto px-2">
-          <Menu />
+          <Menu role={role} />
         </div>
       </div>
 

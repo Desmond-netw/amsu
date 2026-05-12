@@ -79,7 +79,7 @@ const menuItems = [
         name: "Active Operations",
         icon: <FiActivity />,
         type: "link",
-        href: "/admin/active-requests",
+        href: "/activeOperationPage",
         visible: ["admin", "manager"],
       },
       {
@@ -119,8 +119,9 @@ const menuItems = [
   },
 ];
 
-// I added role as a prop here so your logic "item.visible.includes(role)" has a value to check against
-const Menu = ({ role = "staff" }: { role?: string }) => {
+//  "item.visible.includes(role)" has a value to check against
+const Menu = ({ role }: { role: string }) => {
+  console.log("Current User Role:", role);
   const pathname = usePathname();
 
   return (

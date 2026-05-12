@@ -1,4 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
+import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Menu from "./dashboard_components/menu";
 import Link from "next/link";
@@ -11,6 +12,8 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // getting authenticated user
+  const user = await currentUser();
   const { userId } = await auth();
 
   if (!userId) {

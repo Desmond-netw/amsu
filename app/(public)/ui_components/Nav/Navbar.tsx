@@ -51,7 +51,10 @@ export const Navbar = () => {
               })}
             </ul>
 
-            <button className="group flex items-center bg-slate-900 rounded-full overflow-hidden hover:bg-green-700 transition-all">
+            <button
+              onClick={() => (window.location.href = "/request")}
+              className="group flex items-center bg-slate-900 rounded-full overflow-hidden hover:bg-green-700 transition-all"
+            >
               <span className="pl-6 pr-4 text-white font-bold text-xs uppercase tracking-widest">
                 get a quote
               </span>

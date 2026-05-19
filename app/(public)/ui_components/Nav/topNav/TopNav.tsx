@@ -29,7 +29,7 @@ export const Topbar = () => {
 
         {/* RIGHT: Actions */}
         <div className="flex items-center gap-6">
-          <Link href="/admin" className="text-xs font-medium hover:underline">
+          <Link href="/myAMSU" className="text-xs font-medium hover:underline">
             Login / Register
           </Link>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useClerk } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -124,6 +125,7 @@ const menuItems = [
 //  "item.visible.includes(role)" has a value to check against
 const Menu = ({ role }: { role: string }) => {
   const pathname = usePathname();
+  const { signOut } = useClerk();
 
   return (
     <div className="flex flex-col gap-6">
@@ -139,6 +141,19 @@ const Menu = ({ role }: { role: string }) => {
 
             //  Visibility Logic
             if (item.visible.includes(role)) {
+              //  INTERCEPT SIGN OUT HERE
+              if (item.name === "Sign Out") {
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => signOut({ redirectUrl: "/" })} // Directs them to home page after sign-out
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-red-500 hover:bg-red-50/50 transition-all duration-300 text-left font-medium"
+                  >
+                    <span className="text-xl">{item.icon}</span>
+                    <span className="hidden lg:block text-sm">{item.name}</span>
+                  </button>
+                );
+              }
               // RENDER LINK ITEM
               if (item.type === "link") {
                 return (

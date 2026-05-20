@@ -19,9 +19,10 @@ import {
   FiX,
   FiHome,
 } from "react-icons/fi";
+import { GrAnnounce } from "react-icons/gr";
 
 // Components
-import CreateRequestForm from "../forms/CreateRequestForm";
+import CreateRequestForm from "../forms/requestForm";
 import ProjectPortfolioForm from "../forms/ProjectPortfolioForm";
 import ProjectRegistryForm from "../forms/ProjectRegistryForm";
 
@@ -71,6 +72,13 @@ const menuItems = [
         href: "/myAMSU/Staff",
         visible: ["admin", "manager"],
       },
+      {
+        name: "Announcements",
+        icon: <GrAnnounce />,
+        type: "link",
+        href: "/myAMSU/Staff",
+        visible: ["admin", "manager"],
+      },
     ],
   },
   {
@@ -96,7 +104,7 @@ const menuItems = [
         name: "Project Archives",
         icon: <FiBriefcase />,
         type: "link",
-        href: "/myAMSU/recent-projects",
+        href: "/myAMSU/recentProjects",
         visible: ["admin", "manager", "staff"],
       },
     ],

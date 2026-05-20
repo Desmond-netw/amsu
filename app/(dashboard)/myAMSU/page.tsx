@@ -27,6 +27,7 @@ export default function AdminDashboard() {
           value="12"
           color="blue"
           icon={<FiActivity />}
+          viewmoreLink="/myAMSU/activeOperationPage"
         />
         <StatCard
           title="Total Customers"
@@ -39,6 +40,7 @@ export default function AdminDashboard() {
           value="5"
           color="purple"
           icon={<FiFolder />}
+          viewmoreLink="/myAMSU/recentProjects"
         />
       </div>
     </div>

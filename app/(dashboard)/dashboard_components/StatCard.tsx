@@ -9,6 +9,7 @@ type StatCardProps = {
   color?: "brand" | "green" | "blue" | "purple" | "yellow";
   icon: React.ReactNode;
   trend?: string; // Optional: e.g., "+12%"
+  viewmoreLink?: string; // Optional: URL for "View More" action
 };
 
 const colorMap: Record<string, string> = {
@@ -25,6 +26,7 @@ export default function StatCard({
   color = "brand",
   icon,
   trend,
+  viewmoreLink,
 }: StatCardProps) {
   return (
     <div
@@ -66,6 +68,16 @@ export default function StatCard({
           <span className="text-[10px] md:text-xs text-slate-400 font-medium">
             vs last month
           </span>
+        </div>
+      )}
+      {viewmoreLink && (
+        <div className="mt-4">
+          <a
+            href={viewmoreLink}
+            className="text-sm font-medium text-brand_1-600 hover:text-brand_1-700"
+          >
+            View
+          </a>
         </div>
       )}
     </div>

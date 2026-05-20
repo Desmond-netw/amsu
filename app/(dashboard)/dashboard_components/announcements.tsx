@@ -28,7 +28,7 @@ export default function Announcements() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-slate-800">Announcements</h2>
           <Link
-            href="/admin/announcements"
+            href="/myAMSU/announcements"
             className="text-xs text-brand_1-500 hover:underline"
           >
             View All

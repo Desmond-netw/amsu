@@ -45,8 +45,8 @@ const menuItems = [
       {
         name: "Create Request",
         icon: <FiPlusSquare />,
-        type: "modal",
-        component: <CreateRequestForm />,
+        type: "link",
+        href: "/myAMSU/newRequests",
         visible: ["admin", "manager", "staff"],
       },
       {
@@ -82,13 +82,15 @@ const menuItems = [
         href: "/myAMSU/activeOperationPage",
         visible: ["admin", "manager"],
       },
+
       {
-        name: "Pending Inquiries",
+        name: "Pending Requests",
         icon: <FiClock />,
         type: "link",
-        href: "/myAMSU/new-request",
+        href: "/myAMSU/pendingRequests",
         visible: ["admin", "manager"],
       },
+
       {
         name: "Project Archives",
         icon: <FiBriefcase />,
@@ -121,7 +123,6 @@ const menuItems = [
 
 //  "item.visible.includes(role)" has a value to check against
 const Menu = ({ role }: { role: string }) => {
-  console.log("Current User Role:", role);
   const pathname = usePathname();
 
   return (

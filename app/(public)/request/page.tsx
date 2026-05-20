@@ -2,23 +2,27 @@
 
 import React from "react";
 import Container from "@/app/(public)/ui_components/Container";
-import { RiMailSendLine, RiPhoneLine, RiMapPin2Line } from "react-icons/ri";
+import { RiPhoneLine, RiMapPin2Line } from "react-icons/ri";
+
+// 1. Import your dynamic form component
+// Note: Adjust the path if your CreateRequestForm is located in a different directory
+import CreateRequestForm from "@/app/(dashboard)/forms/requestForm";
 
 const RequestPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       {/* --- Section 1: Minimal Hero --- */}
       <section
-        className="relative mx-h-[300px] bg-cover bg-center bg-no-repeat mb-12"
+        className="relative max-h-[300px] bg-cover bg-center bg-no-repeat mb-12"
         style={{ backgroundImage: "url('/assets/request/tool.webp')" }}
       >
         <div className="absolute inset-0 bg-slate-900 bg-opacity-50"></div>
         <Container>
-          <div className="max-w-3xl p-4 md:p-8 lg:p-12 text-white relative z-10 bg-[#000000] opacity-60 ">
+          <div className="max-w-3xl p-4 md:p-8 lg:p-12 text-white relative z-10 bg-black bg-opacity-60 rounded-xl my-6">
             <h1 className="text-4xl font-bold uppercase tracking-tight">
               Request Service
             </h1>
-            <p className="mt-4 text-primary text-lg">
+            <p className="mt-4 text-slate-200 text-lg">
               Submit your technical requirements below. Our engineering team
               will review your application and contact you within 24-48 hours.
             </p>
@@ -30,104 +34,10 @@ const RequestPage = () => {
       <section className="py-12 -mt-10">
         <Container>
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Left Side: The Form */}
+            {/* Left Side: The Form Integration */}
             <div className="lg:w-2/3 bg-white rounded-2xl shadow-xl p-8 border border-slate-100">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Full Name */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Full Name / Company Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 focus:border-transparent outline-none transition-all"
-                      placeholder="John Doe or ABC Ltd"
-                    />
-                  </div>
-                  {/* Service Type */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Service Required
-                    </label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none">
-                      <option>New Sewerage Connection</option>
-                      <option>Maintenance & Repair</option>
-                      <option>Industrial Pre-treatment</option>
-                      <option>Technical Consultation</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Phone */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
-                      placeholder="+233..."
-                    />
-                  </div>
-                  {/* Location */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Project Location (Digital Address)
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
-                      placeholder="GA-123-4567"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Phone */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Type of Facility
-                    </label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none">
-                      <option>Indivdual</option>
-                      <option>Private(Company)</option>
-                      <option>Public</option>
-                    </select>
-                  </div>
-                  {/* Location */}
-                  <div>
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Prefered Date
-                    </label>
-                    <input
-                      type="date"
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
-                    />
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Detailed Description of Request
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
-                    placeholder="Please describe the scope of work..."
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full md:w-auto px-10 py-4 bg-brand_1-600 hover:bg-brand_1-700 text-white font-bold rounded-lg shadow-lg hover:shadow-brand_1-200 transition-all flex items-center justify-center gap-2"
-                >
-                  <RiMailSendLine className="text-xl" />
-                  Submit Request
-                </button>
-              </form>
+              {/* Inserted the advanced form block with your new upload zones */}
+              <CreateRequestForm />
             </div>
 
             {/* Right Side: Quick Contact Info */}
@@ -164,8 +74,9 @@ const RequestPage = () => {
                   Required Documents
                 </h4>
                 <p className="text-sm text-amber-700 leading-relaxed">
-                  For new connections, please have your building permit and site
-                  plan ready for the site inspection phase.
+                  For new connections, please use the form's attachment feature
+                  to upload your building permit and site plan to expedite the
+                  registration phase.
                 </p>
               </div>
             </div>

@@ -1,31 +1,54 @@
 "use client";
 
+import { useUser, UserButton } from "@clerk/nextjs";
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { GrAnnounce } from "react-icons/gr";
-import { UserButton } from "@clerk/nextjs";
 
 const DashNavbar = () => {
-  ``;
+  // 1. Hook into Clerk client-side session state
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  // 2. Safely capture the publicMetadata role we configured earlier (fallback to staff)
+  const role = (user?.publicMetadata?.role as string) || "staff";
+
+  // 3. Fallback name if firstName/lastName aren't loaded or available
+  const fullName = user
+    ? `${user.firstName || ""} ${user.lastName || ""}`.trim()
+    : "Loading...";
+
   return (
-    <div className="flex items-center justify-between p-4">
-      {/* Dashboard Navbar */}
-      <div>Search AREA</div>
-      {/*  ICONS AND USER INFO */}
+    <div className="flex items-center justify-between p-4 bg-white border-b border-slate-100 shadow-sm">
+      {/* Dashboard Navbar Search AREA */}
+      <div className="text-sm font-medium text-slate-400">Search Area...</div>
+
+      {/* ICONS AND USER INFO */}
       <div className="flex items-center gap-6">
-        <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
-          <BiMessageRoundedDots className="fill-current" />
+        {/* Messages */}
+        <div className="bg-slate-50 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer hover:bg-slate-100 transition-colors">
+          <BiMessageRoundedDots className="text-lg" />
         </div>
-        <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative">
-          <GrAnnounce className="fill-current" />
-          <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center rounded-full bg-purple-500 text-white">
+
+        {/* Announcements */}
+        <div className="bg-slate-50 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center cursor-pointer relative hover:bg-slate-100 transition-colors">
+          <GrAnnounce className="text-md" />
+          <div className="absolute -top-1.5 -right-1.5 w-4 h-4 flex items-center justify-center rounded-full bg-brand_1-500 text-white text-[9px] font-bold">
             1
           </div>
         </div>
-        {/* User Info */}
-        <div className="flex flex-col">
-          <span className="text-xs leading-3 font-medium">Larry Donkor</span>
-          <span className="text-[10px] text-gray-500 text-right">Admin</span>
-        </div>
+
+        {/* User Details Block */}
+        {isLoaded && isSignedIn && (
+          <div className="flex flex-col text-right">
+            <span className="text-xs font-semibold text-slate-800 leading-tight">
+              {fullName || user.emailAddresses[0]?.emailAddress}
+            </span>
+            <span className="text-[10px] text-slate-400 font-bold capitalize tracking-wider mt-0.5">
+              {role}
+            </span>
+          </div>
+        )}
+
+        {/* Clerk Profile Control Switch */}
         <UserButton fallback="/" />
       </div>
     </div>

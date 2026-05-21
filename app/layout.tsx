@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@radix-ui/themes/styles.css"; // Ensure Radix styles are imported
 import { Theme } from "@radix-ui/themes";
 import { Inter, Roboto } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Navbar } from "./ui_components/Nav/Navbar";
-import { Footer } from "./ui_components/Footer/Footer";
-import Container from "./ui_components/Container";
-import Topbar from "./ui_components/Nav/topNav/TopNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,38 +19,24 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "AMSU",
-  description: "sewerage management system for Accra Metro",
+  description: "Sewerage management system for Accra Metro",
   icons: {
     icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} text-slate-700 ${roboto.variable} antialiased`}
+        className={`${inter.variable} ${roboto.variable} text-slate-700 antialiased`}
       >
         <ClerkProvider>
-          <Theme>
-            <div className="flex flex-col min-h-screen">
-              {/* Navbar */}
-              <Topbar />
-              <Navbar />
-              {/* Main Content */}
-              <main className="flex-grow pt-8 pb-8">
-                <Container>{children}</Container>
-              </main>
-              {/* Footer */}
-              <Footer />
-            </div>
-          </Theme>
+          <Theme>{children}</Theme>
         </ClerkProvider>
       </body>
     </html>

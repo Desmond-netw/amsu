@@ -34,20 +34,23 @@ model User {
 }
 
 model Request {
-  id String @id @default(uuid())
-  fullName String
-  reqEmail String?
-  reqPhone String
-  reqTypeOfFacilities String
-  typeOfService String // e.g., "Maintenance", "Repair", "Installation"
-  reqDescription String?
-  reqFullAddress String?
-  reqDate DateTime?
-  reqStatus String?
-  createdAt DateTime @default(now())
+  id              String        @id @default(cuid())
+  fullName        String
+  serviceRequired String
+  phone           String
+  location        String
+  facilityType    String
+  preferredDate   DateTime
+  description     String
+  attachmentUrl   String?       // Stores the URL or path of the uploaded file
+  status          RequestStatus @default(IN_PROGRESS)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
   // relations
   users User[]
   customer Customer[]
+
+  @@map("requests")
 }
 
 model ProjectsReg {
@@ -93,4 +96,10 @@ model Customer {
 enum UserSex {
   MALE
   FEMALE
+}
+
+enum RequestStatus {
+  IN_PROGRESS       @map("In Progress")
+  ON_HOLD          @map("On Hold")
+  COMPLETED         @map("Completed")
 }

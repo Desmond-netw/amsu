@@ -12,9 +12,15 @@ import {
   FiFileText,
 } from "react-icons/fi";
 import { updateRequestStatus } from "@/app/actions/request";
-import { RequestStatus } from "@prisma/client";
+import { Request as PrismaRequest, RequestStatus } from "@prisma/client";
 
-export default function ActiveRequestRowItem({ request }: { request: any }) {
+interface ActiveRequestRowItemProps {
+  request: PrismaRequest;
+}
+
+export default function ActiveRequestRowItem({
+  request,
+}: ActiveRequestRowItemProps) {
   const [isPending, startTransition] = useTransition();
 
   const handleStatusUpdate = (newStatus: string) => {

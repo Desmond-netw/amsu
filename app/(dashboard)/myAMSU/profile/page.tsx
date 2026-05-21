@@ -1,6 +1,7 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { FiUser, FiMail, FiShield, FiCalendar } from "react-icons/fi";
+import Image from "next/image";
 
 export default async function ProfilePage() {
   const user = await currentUser();
@@ -28,10 +29,13 @@ export default async function ProfilePage() {
           {/* Avatar placement */}
           <div className="absolute -top-16 left-6 w-24 h-24 rounded-2xl border-4 border-white overflow-hidden bg-slate-200 shadow-md">
             {user.imageUrl ? (
-              <img
+              <Image
                 src={user.imageUrl}
                 alt="Profile"
+                width={96}
+                height={96}
                 className="w-full h-full object-cover"
+                unoptimized
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-slate-300 text-slate-600 text-3xl font-bold">

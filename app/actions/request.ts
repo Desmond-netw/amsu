@@ -4,9 +4,20 @@ import { revalidatePath } from "next/cache";
 import { PrismaClient, RequestStatus } from "@prisma/client";
 
 const prisma = new PrismaClient();
+// strict interface for the form data
+export interface CreateRequestInput {
+  fullName: string;
+  serviceRequired: string;
+  phone: string;
+  location: string;
+  facilityType: string;
+  preferredDate: string | Date;
+  description: string;
+  attachmentUrl?: string | null;
+}
 
 // Action 1: Create a brand new submission from the customer form
-export async function createRequest(formData: any) {
+export async function createRequest(formData: CreateRequestInput) {
   try {
     await prisma.request.create({
       data: {
@@ -17,7 +28,7 @@ export async function createRequest(formData: any) {
         facilityType: formData.facilityType,
         preferredDate: new Date(formData.preferredDate),
         description: formData.description,
-        attachmentUrl: formData.attachmentUrl || null,
+        attachmentUrl: formData.attachmentUrl,
         status: "IN_PROGRESS", // Enforces your initial state rule
       },
     });

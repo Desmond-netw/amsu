@@ -74,9 +74,9 @@ const RequestPage = () => {
                   Required Documents
                 </h4>
                 <p className="text-sm text-amber-700 leading-relaxed">
-                  For new connections, please use the form's attachment feature
-                  to upload your building permit and site plan to expedite the
-                  registration phase.
+                  For new connections, please use the form&apos;s attachment
+                  feature to upload your building permit and site plan to
+                  expedite the registration phase.
                 </p>
               </div>
             </div>

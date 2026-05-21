@@ -14,12 +14,10 @@ export default function CreateRequestForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // 1. Capture the form element reference IMMEDIATELY before doing any async awaits
     const formElement = e.currentTarget;
     const formData = new FormData(formElement);
     let attachmentUrl = "";
 
-    //if file exist , upload it tot he api route first
     try {
       if (selectedFile) {
         const uploadData = new FormData();
@@ -29,7 +27,7 @@ export default function CreateRequestForm() {
           method: "POST",
           body: uploadData,
         });
-        // Guard: Make sure the network request actually returned okay data before parsing
+
         if (uploadResponse.ok) {
           const uploadResult = await uploadResponse.json();
           if (uploadResult.success) {
@@ -38,25 +36,23 @@ export default function CreateRequestForm() {
         }
       }
 
-      //  Format filed data into an object for prisma
+      // Fix: Safely extract values as strings with empty string fallbacks
       const requestData = {
-        fullName: formData.get("fullName"),
-        serviceRequired: formData.get("serviceRequired"),
-        phone: formData.get("phone"),
-        location: formData.get("location"),
-        facilityType: formData.get("facilityType"),
-        preferredDate: formData.get("preferredDate"),
-        description: formData.get("description"),
-        attachmentUrl, // include the attachment URL if it exists
+        fullName: (formData.get("fullName") as string) || "",
+        serviceRequired: (formData.get("serviceRequired") as string) || "",
+        phone: (formData.get("phone") as string) || "",
+        location: (formData.get("location") as string) || "",
+        facilityType: (formData.get("facilityType") as string) || "",
+        preferredDate: (formData.get("preferredDate") as string) || "",
+        description: (formData.get("description") as string) || "",
+        attachmentUrl,
       };
 
-      // execute database actions to create submission
+      // This call will now be completely error-free!
       const res = await createRequest(requestData);
 
       if (res.success) {
         alert("Request submitted successfully!");
-
-        // 5. Use the cached reference to clear the elements safely
         formElement.reset();
         setSelectedFile(null);
       }
@@ -66,16 +62,6 @@ export default function CreateRequestForm() {
     } finally {
       setIsSubmitting(false);
     }
-  };
-  //  ==== Hanlde file selection and removal ====
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
-  const removeFile = () => {
-    setSelectedFile(null);
   };
 
   return (
@@ -105,10 +91,16 @@ export default function CreateRequestForm() {
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
           >
             <option value="">Select a service</option>
-            <option>New Sewerage Connection</option>
-            <option>Maintenance & Repair</option>
-            <option>Industrial Pre-treatment</option>
-            <option>Technical Consultation</option>
+            <option value="New Sewerage Connection">
+              New Sewerage Connection
+            </option>
+            <option value="Maintenance & Repair">Maintenance & Repair</option>
+            <option value="Industrial Pre-treatment">
+              Industrial Pre-treatment
+            </option>
+            <option value="Technical Consultation">
+              Technical Consultation
+            </option>
           </select>
         </div>
       </div>
@@ -152,10 +144,9 @@ export default function CreateRequestForm() {
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand_1-500 outline-none"
           >
             <option value="">Select a facility type</option>
-            <option>Individual</option>
-
-            <option>Private(Company)</option>
-            <option>Public</option>
+            <option value="Individual">Individual</option>
+            <option value="Private(Company)">Private(Company)</option>
+            <option value="Public">Public</option>
           </select>
         </div>
         {/* Preferred Date */}
@@ -232,10 +223,11 @@ export default function CreateRequestForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full md:w-auto px-10 py-4 bg-brand_1-600 hover:bg-brand_1-700 text-white font-bold rounded-lg shadow-lg hover:shadow-brand_1-200 transition-all flex items-center justify-center gap-2"
+        disabled={isSubmitting}
+        className="w-full md:w-auto px-10 py-4 bg-brand_1-600 hover:bg-brand_1-700 text-white font-bold rounded-lg shadow-lg hover:shadow-brand_1-200 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <RiMailSendLine className="text-xl" />
-        Submit Request
+        {isSubmitting ? "Submitting..." : "Submit Request"}
       </button>
     </form>
   );

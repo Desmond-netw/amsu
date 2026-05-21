@@ -1,6 +1,6 @@
 import { Navbar } from "./ui_components/Nav/Navbar";
 import { Footer } from "./ui_components/Footer/Footer";
-import Container from "./ui_components/Container";
+// import Container from "./ui_components/Container";
 import Topbar from "./ui_components/Nav/topNav/TopNav";
 
 export default function PublicLayout({

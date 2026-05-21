@@ -27,6 +27,7 @@ export default function StaffPage() {
             className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4"
           >
             <div className="w-16 h-16 bg-brand_1-100 rounded-full flex items-center justify-center text-brand_1-700 text-2xl font-bold">
+              <FiUsers />
               {s.name.charAt(0)}
             </div>
             <div>

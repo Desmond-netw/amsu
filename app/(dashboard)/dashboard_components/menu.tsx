@@ -37,13 +37,13 @@ const menuItems = [
         href: "/myAMSU",
         visible: ["admin", "manager", "staff"],
       },
-      {
-        name: "Service Tickets",
-        icon: <FiGrid />,
-        type: "link",
-        href: "/myAMSU/ServiceTickets",
-        visible: ["admin", "manager", "staff"],
-      },
+      // {
+      //   name: "Service Tickets",
+      //   icon: <FiGrid />,
+      //   type: "link",
+      //   href: "/myAMSU/ServiceTickets",
+      //   visible: ["admin", "manager", "staff"],
+      // },
       {
         name: "Create Request",
         icon: <FiPlusSquare />,
@@ -89,7 +89,7 @@ const menuItems = [
         icon: <FiActivity />,
         type: "link",
         href: "/myAMSU/activeOperationPage",
-        visible: ["admin", "manager"],
+        visible: ["admin", "manager", "staff"],
       },
 
       {
@@ -97,7 +97,7 @@ const menuItems = [
         icon: <FiClock />,
         type: "link",
         href: "/myAMSU/pendingRequests",
-        visible: ["admin", "manager"],
+        visible: ["admin", "manager", "staff"],
       },
 
       {

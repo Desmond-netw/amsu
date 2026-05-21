@@ -21,10 +21,10 @@ export default async function PendingProjectsPage() {
       <div className="flex justify-between items-center bg-amber-600 p-6 md:p-8 rounded-2xl text-white shadow-md">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">
-            Pending Inquiries & and on Hold
+            Pending Inquiries & Hold
           </h1>
           <p className="text-amber-100 text-sm mt-1">
-            Review and clear tasks that are paused or awaiting validation.
+            Requests that are paused or awaiting validation.
           </p>
         </div>
         <div className="bg-amber-700/50 border border-amber-500 px-4 py-2 rounded-xl text-xs font-bold uppercase text-amber-100 flex items-center gap-2">

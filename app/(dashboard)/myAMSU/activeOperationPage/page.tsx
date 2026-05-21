@@ -1,7 +1,6 @@
 import React from "react";
 import { PrismaClient } from "@prisma/client";
 import * as Accordion from "@radix-ui/react-accordion";
-import { FiActivity } from "react-icons/fi";
 import ActiveRequestRowItem from "@/app/(dashboard)/dashboard_components/ActiveRequestRowItem"; // Client component wrapper for interactions
 
 const prisma = new PrismaClient();

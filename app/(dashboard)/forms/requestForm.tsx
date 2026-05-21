@@ -14,7 +14,9 @@ export default function CreateRequestForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    // 1. Capture the form element reference IMMEDIATELY before doing any async awaits
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
     let attachmentUrl = "";
 
     //if file exist , upload it tot he api route first
@@ -23,21 +25,23 @@ export default function CreateRequestForm() {
         const uploadData = new FormData();
         uploadData.append("file", selectedFile);
 
-        const uploadResponse = await fetch("api/upload", {
+        const uploadResponse = await fetch("/api/upload", {
           method: "POST",
           body: uploadData,
         });
-
-        const uploadResult = await uploadResponse.json();
-        if (uploadResult.success) {
-          attachmentUrl = uploadResult.url; // get the upload url from the response
+        // Guard: Make sure the network request actually returned okay data before parsing
+        if (uploadResponse.ok) {
+          const uploadResult = await uploadResponse.json();
+          if (uploadResult.success) {
+            attachmentUrl = uploadResult.url;
+          }
         }
       }
 
       //  Format filed data into an object for prisma
       const requestData = {
-        fullName: formData.get("fullName") as string,
-        serviceRequired: formData.get("serviceRequired") as string,
+        fullName: formData.get("fullName"),
+        serviceRequired: formData.get("serviceRequired"),
         phone: formData.get("phone"),
         location: formData.get("location"),
         facilityType: formData.get("facilityType"),
@@ -48,10 +52,13 @@ export default function CreateRequestForm() {
 
       // execute database actions to create submission
       const res = await createRequest(requestData);
+
       if (res.success) {
         alert("Request submitted successfully!");
-        (e.currentTarget as HTMLFormElement).reset(); // Reset form fields
-        setSelectedFile(null); // Clear selected file
+
+        // 5. Use the cached reference to clear the elements safely
+        formElement.reset();
+        setSelectedFile(null);
       }
     } catch (err) {
       console.error("Error submitting request:", err);

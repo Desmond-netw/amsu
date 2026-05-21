@@ -57,7 +57,6 @@ export default function ActiveRequestRowItem({ request }: { request: any }) {
               onChange={(e) => handleStatusUpdate(e.target.value)}
               className="text-xs font-bold px-3 py-2 rounded-lg border outline-none pr-8 bg-slate-50 border-slate-200"
             >
-              <option value="PENDING_REVIEW">Pending Review</option>
               <option value="IN_PROGRESS">In Progress</option>
               <option value="ON_HOLD">On Hold</option>
               <option value="COMPLETED">Completed</option>

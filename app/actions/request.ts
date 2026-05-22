@@ -29,6 +29,7 @@ export async function createRequest(formData: CreateRequestInput) {
         preferredDate: new Date(formData.preferredDate),
         description: formData.description,
         attachmentUrl: formData.attachmentUrl,
+        statusComment: null, // Initialize with null or empty string
         status: "IN_PROGRESS", // Enforces your initial state rule
       },
     });
@@ -42,16 +43,20 @@ export async function createRequest(formData: CreateRequestInput) {
 }
 
 // Action 2: Mutate the status of a request (Triggers page re-routing automatically)
-export async function updateRequestStatus(id: string, status: RequestStatus) {
+export async function updateRequestStatus(
+  id: string,
+  status: RequestStatus,
+  comment?: string,
+) {
   try {
     await prisma.request.update({
       where: { id },
-      data: { status },
+      data: { status, statusComment: comment, statusUpdatedAt: new Date() },
     });
 
     // Revalidate all pages tracking this status changes
     revalidatePath("/myAMSU/activeOperationPage");
-    revalidatePath("/myAMSU/new-request");
+    revalidatePath("/myAMSU/pendingRequests");
     revalidatePath("/myAMSU/recentProjects");
 
     return { success: true };

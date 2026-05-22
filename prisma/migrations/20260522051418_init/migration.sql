@@ -1,6 +1,9 @@
 -- CreateEnum
 CREATE TYPE "UserSex" AS ENUM ('MALE', 'FEMALE');
 
+-- CreateEnum
+CREATE TYPE "RequestStatus" AS ENUM ('In Progress', 'On Hold', 'Completed');
+
 -- CreateTable
 CREATE TABLE "Admin" (
     "id" TEXT NOT NULL,
@@ -27,20 +30,23 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Request" (
+CREATE TABLE "requests" (
     "id" TEXT NOT NULL,
     "fullName" TEXT NOT NULL,
-    "reqEmail" TEXT,
-    "reqPhone" TEXT NOT NULL,
-    "reqTypeOfFacilities" TEXT NOT NULL,
-    "typeOfService" TEXT NOT NULL,
-    "reqDescription" TEXT,
-    "reqFullAddress" TEXT,
-    "reqDate" TIMESTAMP(3),
-    "reqStatus" TEXT,
+    "serviceRequired" TEXT NOT NULL,
+    "phone" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+    "facilityType" TEXT NOT NULL,
+    "preferredDate" TIMESTAMP(3) NOT NULL,
+    "description" TEXT NOT NULL,
+    "attachmentUrl" TEXT,
+    "status" "RequestStatus" NOT NULL DEFAULT 'In Progress',
+    "statusComment" TEXT,
+    "statusUpdatedAt" TIMESTAMP(3),
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Request_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "requests_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -111,7 +117,7 @@ CREATE UNIQUE INDEX "Customer_email_key" ON "Customer"("email");
 CREATE UNIQUE INDEX "Customer_requestId_key" ON "Customer"("requestId");
 
 -- AddForeignKey
-ALTER TABLE "User" ADD CONSTRAINT "User_requestId_fkey" FOREIGN KEY ("requestId") REFERENCES "Request"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE "User" ADD CONSTRAINT "User_requestId_fkey" FOREIGN KEY ("requestId") REFERENCES "requests"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Customer" ADD CONSTRAINT "Customer_requestId_fkey" FOREIGN KEY ("requestId") REFERENCES "Request"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE "Customer" ADD CONSTRAINT "Customer_requestId_fkey" FOREIGN KEY ("requestId") REFERENCES "requests"("id") ON DELETE SET NULL ON UPDATE CASCADE;

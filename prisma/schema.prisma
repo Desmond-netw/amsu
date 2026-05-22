@@ -44,6 +44,8 @@ model Request {
   description     String
   attachmentUrl   String?       // Stores the URL or path of the uploaded file
   status          RequestStatus @default(IN_PROGRESS)
+  statusComment   String?
+  statusUpdatedAt DateTime?
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
   // relations

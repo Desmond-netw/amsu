@@ -93,9 +93,8 @@ export default function ActiveRequestRowItem({
                 onChange={(e) => handleSelectChange(e.target.value)}
                 className="text-xs font-bold px-3 py-2 rounded-lg border outline-none pr-8 bg-slate-50 border-slate-200 cursor-pointer"
               >
-                <option value="PENDING_REVIEW">Pending Review</option>
                 <option value="IN_PROGRESS">In Progress</option>
-                <option value="ON_HOLD">On Hold</option>
+                <option value="ON_HOLD">On Hold/Pending</option>
                 <option value="COMPLETED">Completed</option>
               </select>
               <FiChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500" />

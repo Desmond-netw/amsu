@@ -75,7 +75,7 @@ const menuItems = [
         name: "Announcements",
         icon: <GrAnnounce />,
         type: "link",
-        href: "/myAMSU/Staff",
+        href: "/myAMSU/announcements",
         visible: ["admin", "manager"],
       },
     ],

@@ -8,7 +8,7 @@ import Pretitle from "../ui_components/pretitle/Pretitile";
 const servicesData = [
   {
     title: "Sewerage Collection and Treatment",
-    bgImage: "/assets/services/treatment/banner.webp",
+    bgImage: "/assets/services/waste_treatment/banner.webp",
     link: "/services/treatment",
   },
   {

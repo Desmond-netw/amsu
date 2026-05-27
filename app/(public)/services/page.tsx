@@ -21,11 +21,11 @@ const servicesData = [
     bgImage: "/assets/services/maintenance/maintenance-0.jpeg",
     link: "/services/repair",
   },
-  {
-    title: "Industrial Wastewater Treatment",
-    bgImage: "/assets/services/industrialWaste/wasteThumb.webp",
-    link: "/services/industrial-treatment",
-  },
+  // {
+  //   title: "Industrial Wastewater Treatment",
+  //   bgImage: "/assets/services/industrialWaste/wasteThumb.webp",
+  //   link: "/services/industrial-treatment",
+  // },
   {
     title: "Sewerage Network Design and Construction",
     bgImage: "/assets/services/construction/construction-0.webp",

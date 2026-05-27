@@ -91,7 +91,7 @@ const MobileNav = () => {
           <div className="mt-10">
             <Link
               prefetch={false}
-              href="/admin"
+              href="/myAMSU"
               className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-sm font-light rounded-md text-white bg-transparent transition-colors duration-200 shadow-sm"
             >
               Login / Register

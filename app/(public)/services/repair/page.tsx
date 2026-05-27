@@ -39,7 +39,7 @@ export default function ConstructionPage() {
             communities.
           </p>
           {/* btn */}
-          <Button text="Request Quote" linkstring="/services" />
+          <Button text="Request Quote" linkstring="/request" />
         </div>
       </div>
 

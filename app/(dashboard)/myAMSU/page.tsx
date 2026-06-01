@@ -1,4 +1,3 @@
-import StatCard from "@/app/(dashboard)/dashboard_components/StatCard";
 import { Suspense } from "react";
 import DashboardGridData from "@/app/(dashboard)/dashboard_components/dashboardGridData";
 

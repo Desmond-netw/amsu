@@ -9,7 +9,7 @@ export default function ConstructionPage() {
     <div>
       <ServiceDetail
         title="Sewerage Network Design and Construction"
-        description="Our engineering team provides expert consultation, design, and construction services for sewerage networks of all scales."
+        description="Our engineering team provides expert consultation, design, and construction services for sewerage networks of all scales. Utilizing advanced technologies, we ensure precision and efficiency through modern pipe-laying techniques, specialized cutters, and proper, highly controlled excavation methods to deliver long-lasting infrastructure."
       />
       {/* --- Two Side Image & Text --- */}
       <div className="flex flex-col md:flex-row items-center sm:gap-4 sm:my-2 md:gap-8 md:my-8 bg-grey-100 p-6 rounded-lg shadow-md">

@@ -1,7 +1,6 @@
-"use client";
-
 import StatCard from "@/app/(dashboard)/dashboard_components/StatCard";
-import { FiActivity, FiUsers, FiFolder } from "react-icons/fi";
+import { Suspense } from "react";
+import DashboardGridData from "@/app/(dashboard)/dashboard_components/dashboardGridData";
 
 export default function AdminDashboard() {
   return (
@@ -20,29 +19,18 @@ export default function AdminDashboard() {
         {/* User Account */}
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <StatCard
-          title="Active Requests"
-          value="12"
-          color="blue"
-          icon={<FiActivity />}
-          viewmoreLink="/myAMSU/activeOperationPage"
-        />
-        <StatCard
-          title="Total Customers"
-          value="48"
-          color="green"
-          icon={<FiUsers />}
-        />
-        <StatCard
-          title="Recent Projects"
-          value="5"
-          color="purple"
-          icon={<FiFolder />}
-          viewmoreLink="/myAMSU/recentProjects"
-        />
-      </div>
+      {/* Mount your live database metrics card cluster safely wrapped in a skeleton fallback */}
+      <Suspense
+        fallback={
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-pulse">
+            <div className="h-32 bg-slate-100 rounded-2xl border"></div>
+            <div className="h-32 bg-slate-100 rounded-2xl border"></div>
+            <div className="h-32 bg-slate-100 rounded-2xl border"></div>
+          </div>
+        }
+      >
+        <DashboardGridData />
+      </Suspense>
     </div>
   );
 }

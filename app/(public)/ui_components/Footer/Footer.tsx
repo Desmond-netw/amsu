@@ -34,18 +34,40 @@ export const Footer = () => {
             <h3 className="text-brand_1-100 text-base font-bold">Services</h3>
             <ul className="text-brand_1-200">
               <li>
-                <Link href="#" className="hover:text-brand_1-300">
-                  Water Treatment
+                <Link
+                  href="/services/treatment"
+                  className="hover:text-brand_1-300"
+                >
+                  Sewerage Collection and Treatment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/wastewater"
+                  className="hover:text-brand_1-300"
+                >
+                  Wastewater Management
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-brand_1-300">
-                  Sewage Management
+                  Sewer Network Maintenance and Repair
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-brand_1-300">
-                  Drainage Solutions
+                <Link
+                  href="/services/construction"
+                  className="hover:text-brand_1-300"
+                >
+                  Sewerage Network Design and Construction
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/customer-support"
+                  className="hover:text-brand_1-300"
+                >
+                  Customer Service and Support
                 </Link>
               </li>
             </ul>

@@ -38,7 +38,7 @@ export const Footer = () => {
                   href="/services/treatment"
                   className="hover:text-brand_1-300"
                 >
-                  Sewerage Collection and Treatment
+                  Sewerage Treatment
                 </Link>
               </li>
               <li>
@@ -51,7 +51,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link href="#" className="hover:text-brand_1-300">
-                  Sewer Network Maintenance and Repair
+                  Sewer Network Maintenance
                 </Link>
               </li>
               <li>
@@ -59,7 +59,7 @@ export const Footer = () => {
                   href="/services/construction"
                   className="hover:text-brand_1-300"
                 >
-                  Sewerage Network Design and Construction
+                  Sewerage Network Construction
                 </Link>
               </li>
               <li>
@@ -67,7 +67,7 @@ export const Footer = () => {
                   href="/services/customer-support"
                   className="hover:text-brand_1-300"
                 >
-                  Customer Service and Support
+                  Customer Service
                 </Link>
               </li>
             </ul>
@@ -83,29 +83,22 @@ export const Footer = () => {
                   Teams
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="hover:text-brand_1-300">
                   Careers
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="#" className="hover:text-brand_1-300">
+                <Link href="/contacts" className="hover:text-brand_1-300">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-brand_1-300">
+                <Link
+                  href="/services/customer-support"
+                  className="hover:text-brand_1-300"
+                >
                   Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-brand_1-300">
-                  FAQs
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-brand_1-300">
-                  Live Chat
                 </Link>
               </li>
             </ul>

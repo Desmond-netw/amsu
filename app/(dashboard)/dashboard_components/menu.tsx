@@ -68,7 +68,7 @@ const menuItems = [
         name: "Personnel Directory",
         icon: <FiUsers />,
         type: "link",
-        href: "/myAMSU/Staff",
+        href: "/myAMSU/staffPage",
         visible: ["admin", "manager"],
       },
       {

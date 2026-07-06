@@ -52,9 +52,7 @@ export default function StaffPage() {
         <h1 className="text-2xl font-bold text-slate-900">
           Personnel Directory
         </h1>
-        <p className="text-sm text-slate-500 mt-1">
-          Active field engineering and operations roster.
-        </p>
+        <p className="text-sm text-slate-500 mt-1">Active AMSU Staff List.</p>
       </div>
 
       {/* Staff Grid Container */}

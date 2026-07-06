@@ -17,7 +17,7 @@ export default async function ProfilePage() {
       <div>
         <h1 className="text-2xl font-bold text-slate-900">Account Profile</h1>
         <p className="text-sm text-slate-500">
-          Manage your personal credentials and platform access permissions.
+          Manage your personal Information.
         </p>
       </div>
 

@@ -98,6 +98,25 @@ model Announcement {
   @@map("announcements")
 }
 
+// staff
+model Staff {
+  id              String       @id @default(uuid())
+  name            String
+  age             Int
+  profilePhoto    String       @default("/assets/staff/default.jpg")
+  role            UtilityRole
+  email           String       @unique
+  phone           String
+  certifications  String[]     // PostgreSQL natively supports string arrays
+  safetyStatus    SafetyStatus @default(PENDING_REVIEW)
+  assignedVehicle String?      // Optional field
+  isArchived      Boolean      @default(false)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@map("staff") // Maps the table name as lowercase "staff" in PostgreSQL
+}
+
 enum UserSex {
   MALE
   FEMALE
@@ -107,4 +126,20 @@ enum RequestStatus {
   IN_PROGRESS @map("In Progress")
   ON_HOLD     @map("On Hold")
   COMPLETED   @map("Completed")
+}
+
+
+enum UtilityRole {
+  PLUMBER
+  ELECTRICIAN
+  FIELD_ENGINEER
+  SITE_SUPERVISOR
+  SAFETY_INSPECTOR
+  TREATMENT_PLANT_OPERATOR
+}
+
+enum SafetyStatus {
+  CLEARED
+  PENDING_REVIEW
+  SUSPENDED
 }

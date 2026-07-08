@@ -42,7 +42,7 @@ const LoginPage = () => {
                 Welcome Back
               </h2>
               <p className="text-slate-500 text-sm">
-                Login to your AMSU admin account
+                Login to your AMSU account
               </p>
             </div>
 

@@ -96,8 +96,10 @@ const StationsSwiper = () => {
                 </div>
 
                 <div className="mt-8 flex items-center gap-2 text-brand_1-700 font-semibold cursor-pointer hover:gap-4 transition-all w-fit">
-                  <span>View Station Logs</span>
-                  <span className="text-xl">→</span>
+                  {/* Statios log button will be commented out for now. If needed uncomment to activat */}
+                  {/* <span>View Station Logs</span>
+                  <span className="text-xl">→</span> */}
+                  {/* ============   commented out ===== */}
                 </div>
               </div>
             </div>

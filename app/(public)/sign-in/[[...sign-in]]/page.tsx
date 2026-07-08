@@ -19,7 +19,7 @@ const LoginPage = () => {
           {/* Logo */}
           <Logo width={200} height={200} />
 
-          <h2 className="text-brand_1-50 text-center text-sm max-w-sm">
+          <h2 className="text-brand_1-50 text-center text-md max-w-sm">
             Secure access to the AMSU administrative portal. Authorized
             personnel only.
           </h2>

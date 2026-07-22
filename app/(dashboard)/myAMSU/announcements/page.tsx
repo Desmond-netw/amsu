@@ -20,10 +20,10 @@ export default async function AnnouncementsPage() {
     <div className="space-y-6 max-w-5xl mx-auto p-4">
       <div>
         <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
-          System Announcements Bulletin
+          Announcements System
         </h1>
         <p className="text-sm text-slate-500">
-          View corporate bulletins and active operational dispatches.
+          Broadcast announcement to the dashboard.
         </p>
       </div>
 

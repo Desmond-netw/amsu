@@ -8,7 +8,7 @@ export default async function ProfilePage() {
 
   if (!user) {
     redirect("/sign-in");
-  }
+ }
 
   const role = (user.publicMetadata?.role as string) || "staff";
 

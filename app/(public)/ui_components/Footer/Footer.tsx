@@ -79,7 +79,7 @@ export const Footer = () => {
             </h3>
             <ul className="text-brand_1-200">
               <li>
-                <Link href="#" className="hover:text-brand_1-300">
+                <Link href="/team" className="hover:text-brand_1-300">
                   Teams
                 </Link>
               </li>
@@ -89,7 +89,7 @@ export const Footer = () => {
                 </Link>
               </li> */}
               <li>
-                <Link href="/contacts" className="hover:text-brand_1-300">
+                <Link href="/contact" className="hover:text-brand_1-300">
                   Contact
                 </Link>
               </li>
